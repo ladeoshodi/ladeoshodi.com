@@ -1,0 +1,11 @@
+:root {
+  /* Variables */
+  --primary-background: #652cb3;
+  --secondary-background: #414bb2;
+  --transparent-primary: #642cb333;
+}
+body {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
