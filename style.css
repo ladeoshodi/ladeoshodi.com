@@ -32,8 +32,8 @@ body {
 .nav {
   border: 2px solid black;
   display: flex;
-  /* justify-content: space-between; */
 }
+
 .nav img {
   width: 50px;
   height: auto;
@@ -50,4 +50,10 @@ body {
 .nav-links li > a:hover {
   color: var(--primary-background);
   font-weight: bold;
+}
+
+@media screen and (max-width: 500px) {
+  .nav-links {
+    font-size: 1rem;
+  }
 }
