@@ -24,21 +24,29 @@ ul {
 
 body {
   box-sizing: border-box;
-  padding: 10px;
+  padding: 15px;
   margin: 0;
   font-family: "Open Sans", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
+  font-size: 1.1rem;
 }
 
 .bold {
   font-weight: bold;
 }
 
+.section-title {
+  background-color: var(--primary-background);
+  color: white;
+  margin-bottom: 8px;
+}
+
 /* Nav styling */
 .nav {
   border: 2px solid black;
   display: flex;
+  margin-bottom: 8px;
 }
 
 .nav img {
@@ -51,7 +59,7 @@ body {
   align-items: center;
   justify-content: space-around;
   width: 100%;
-  font-size: 1.2rem;
+  font-size: 1.1rem;
 }
 
 .nav-links li > a:hover {
@@ -60,8 +68,36 @@ body {
 }
 
 /* header styling */
+.header-title {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  font-weight: 700;
+}
+
+.header-body {
+  display: flex;
+  gap: 10px;
+}
+
+.header-content-main {
+  color: #da0064;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
 .header-image {
-  /* background-image: url("assets/lade-oshodi.jpeg"); */
+  width: 150%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("assets/lade-oshodi.jpeg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.header-image > img {
+  width: 100%;
 }
 
 @media screen and (max-width: 500px) {
