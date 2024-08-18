@@ -82,7 +82,7 @@ body {
 
 .header-body {
   display: flex;
-  gap: 10px;
+  gap: 50px;
   padding: 0 15px;
 }
 
@@ -98,8 +98,9 @@ body {
   align-items: center;
   justify-content: center;
   background-image: url("assets/lade-oshodi.jpeg");
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .header-image > img {
@@ -151,6 +152,7 @@ body {
 .project-grid {
   padding: 0 15px;
   display: flex;
+  margin-bottom: 12px;
 }
 
 .project-card {
@@ -179,6 +181,18 @@ body {
 
 .project-links a {
   color: var(--secondary-background);
+}
+
+.project-btn {
+  text-align: center;
+  padding: 15px;
+  background-color: var(--primary-background);
+  width: 35%;
+  margin: 0 auto;
+}
+
+.project-btn a {
+  color: white;
 }
 
 @media screen and (max-width: 500px) {
@@ -219,5 +233,15 @@ body {
   }
   .project-card {
     width: 100%;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .header-title {
+    gap: 50px;
+  }
+
+  .header-body {
+    padding: 0 40px;
   }
 }
