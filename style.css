@@ -158,4 +158,9 @@ body {
     background-size: cover;
     background-position: center;
   }
+
+  /* skill section mobile styling */
+  .skill-card {
+    width: 100%;
+  }
 }
