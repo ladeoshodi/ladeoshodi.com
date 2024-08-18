@@ -83,6 +83,7 @@ body {
 .header-body {
   display: flex;
   gap: 10px;
+  padding: 0 15px;
 }
 
 .header-content-main {
@@ -106,7 +107,11 @@ body {
 }
 
 /* skill styling */
-.skill-body {
+.skills {
+  margin-bottom: 12px;
+}
+
+.skill-grid {
   display: flex;
   gap: 10px;
   flex-wrap: wrap;
@@ -133,6 +138,49 @@ body {
   font-weight: 700;
 }
 
+/* project section styling */
+.projects {
+  margin-bottom: 12px;
+}
+
+.project-section-text {
+  padding: 0 15px;
+  font-weight: 700;
+}
+
+.project-grid {
+  padding: 0 15px;
+  display: flex;
+}
+
+.project-card {
+  width: 50%;
+}
+
+.project-image img {
+  width: 100%;
+}
+
+.project-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.project-title {
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+.project-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.project-links a {
+  color: var(--secondary-background);
+}
+
 @media screen and (max-width: 500px) {
   .nav-links {
     font-size: 1rem;
@@ -151,6 +199,7 @@ body {
   }
   .header-body {
     display: block;
+    padding: 0;
   }
   .header-image {
     width: 100%;
@@ -161,6 +210,14 @@ body {
 
   /* skill section mobile styling */
   .skill-card {
+    width: 100%;
+  }
+
+  /* project section mobile styling */
+  .project-section-text {
+    text-align: center;
+  }
+  .project-card {
     width: 100%;
   }
 }
