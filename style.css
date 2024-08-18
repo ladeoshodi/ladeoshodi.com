@@ -198,6 +198,33 @@ body {
   color: white;
 }
 
+/* connect section styling */
+
+.connect {
+  background-color: var(--primary-background);
+  color: white;
+  padding: 30px 20px;
+  font-size: 1rem;
+  font-weight: 400;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.connect-links {
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.connect-links a {
+  color: white;
+  font-size: 2rem;
+}
+
+/* responsive styling */
+
 @media screen and (max-width: 500px) {
   .nav-links {
     font-size: 1rem;
@@ -237,6 +264,11 @@ body {
   .project-card {
     width: 100%;
     border-bottom: 1px solid black;
+  }
+
+  /* connect section mobile styling */
+  .connect {
+    flex-direction: column;
   }
 }
 
