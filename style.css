@@ -5,7 +5,6 @@
   --primary-background: #652cb3;
   --secondary-background: #414bb2;
   --transparent-primary: #642cb333;
-  --primary-font-color: white;
 }
 
 /* override some defaults */
@@ -221,6 +220,14 @@ body {
 .connect-links a {
   color: white;
   font-size: 2rem;
+}
+
+/* footer styling */
+.footer {
+  background-color: var(--secondary-background);
+  color: white;
+  text-align: center;
+  padding: 1px 0;
 }
 
 /* responsive styling */
