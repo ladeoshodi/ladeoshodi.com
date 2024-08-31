@@ -1,3 +1,3 @@
-# ladeoshodi.com
+# Personal Portfolio
 
-https://ladeoshodi.github.io/ladeoshodi.com/
+[ladeoshodi.com](https://www.ladeoshodi.com)
