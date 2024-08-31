@@ -1,6 +1,4 @@
-import { Box, Avatar, Typography } from "@mui/material";
-
-import ladeLogo from "../assets/lade-logo.png";
+import { Box, Typography } from "@mui/material";
 
 function Nav() {
   return (
@@ -13,16 +11,16 @@ function Nav() {
           justifyContent: "space-around",
           textAlign: "center",
           p: 1,
+          marginBottom: 1,
         }}
       >
-        <Avatar src={ladeLogo} alt="lade logo"></Avatar>
         <Typography
           sx={[
             { minWidth: 100 },
             {
               "&:hover": {
                 cursor: "pointer",
-                color: "#652cb3",
+                color: "#da0064",
               },
             },
           ]}
@@ -35,7 +33,7 @@ function Nav() {
             {
               "&:hover": {
                 cursor: "pointer",
-                color: "#652cb3",
+                color: "#da0064",
               },
             },
           ]}
@@ -48,7 +46,7 @@ function Nav() {
             {
               "&:hover": {
                 cursor: "pointer",
-                color: "#652cb3",
+                color: "#da0064",
               },
             },
           ]}
@@ -61,7 +59,7 @@ function Nav() {
             {
               "&:hover": {
                 cursor: "pointer",
-                color: "#652cb3",
+                color: "#da0064",
               },
             },
           ]}
