@@ -2,7 +2,7 @@ import { Box, Typography, styled } from "@mui/material";
 
 function Nav() {
   const NavItem = styled(Typography)({
-    ":hover": {
+    "&:hover": {
       cursor: "pointer",
       color: "#da0064",
     },

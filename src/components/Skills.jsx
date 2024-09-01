@@ -11,6 +11,7 @@ function Skills() {
     textAlign: "center",
     flexGrow: 1,
     width: "40%",
+    color: "rgba(40, 40, 40, 0.87)",
     "@media(max-width: 500px)": {
       width: "100%",
     },
@@ -22,7 +23,7 @@ function Skills() {
         component="h3"
         variant="h3"
         sx={{
-          p: 3,
+          p: 2,
           "@media(max-width: 500px)": {
             textAlign: "center",
           },
@@ -37,6 +38,7 @@ function Skills() {
           flexWrap: "wrap",
           gap: 2,
           justifyContent: "center",
+          padding: "16px",
         }}
       >
         <Card>
