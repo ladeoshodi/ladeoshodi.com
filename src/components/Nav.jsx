@@ -12,6 +12,7 @@ function Nav() {
           textAlign: "center",
           p: 1,
           marginBottom: 1,
+          backgroundColor: "white",
         }}
       >
         <Typography
