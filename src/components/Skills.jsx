@@ -1,21 +1,21 @@
 import { Box, Typography, Icon, styled, Paper } from "@mui/material";
 
-const Card = styled(Paper)({
-  display: "flex",
-  flexDirection: "column",
-  alignItems: "center",
-  backgroundColor: "#fff",
-  fontSize: "1rem",
-  padding: "8px",
-  textAlign: "center",
-  flexGrow: 1,
-  width: "40%",
-  "@media(max-width: 500px)": {
-    width: "100%",
-  },
-});
-
 function Skills() {
+  const Card = styled(Paper)({
+    display: "flex",
+    flexDirection: "column",
+    alignItems: "center",
+    backgroundColor: "#fff",
+    fontSize: "1rem",
+    padding: "8px",
+    textAlign: "center",
+    flexGrow: 1,
+    width: "40%",
+    "@media(max-width: 500px)": {
+      width: "100%",
+    },
+  });
+
   return (
     <>
       <Typography

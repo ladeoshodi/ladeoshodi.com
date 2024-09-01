@@ -1,6 +1,13 @@
-import { Box, Typography } from "@mui/material";
+import { Box, Typography, styled } from "@mui/material";
 
 function Nav() {
+  const NavItem = styled(Typography)({
+    ":hover": {
+      cursor: "pointer",
+      color: "#da0064",
+    },
+  });
+
   return (
     <>
       <Box
@@ -10,64 +17,15 @@ function Nav() {
           alignItems: "center",
           justifyContent: "space-around",
           textAlign: "center",
-          flexWrap: "wrap",
           p: 1,
           marginBottom: 1,
           backgroundColor: "white",
         }}
       >
-        <Typography
-          sx={[
-            { minWidth: 100 },
-            {
-              "&:hover": {
-                cursor: "pointer",
-                color: "#da0064",
-              },
-            },
-          ]}
-        >
-          Home
-        </Typography>
-        <Typography
-          sx={[
-            { minWidth: 100 },
-            {
-              "&:hover": {
-                cursor: "pointer",
-                color: "#da0064",
-              },
-            },
-          ]}
-        >
-          Skills
-        </Typography>
-        <Typography
-          sx={[
-            { minWidth: 100 },
-            {
-              "&:hover": {
-                cursor: "pointer",
-                color: "#da0064",
-              },
-            },
-          ]}
-        >
-          Projects
-        </Typography>
-        <Typography
-          sx={[
-            { minWidth: 100 },
-            {
-              "&:hover": {
-                cursor: "pointer",
-                color: "#da0064",
-              },
-            },
-          ]}
-        >
-          Connect
-        </Typography>
+        <NavItem>Home</NavItem>
+        <NavItem>Skills</NavItem>
+        <NavItem>Projects</NavItem>
+        <NavItem>Connect</NavItem>
       </Box>
     </>
   );
