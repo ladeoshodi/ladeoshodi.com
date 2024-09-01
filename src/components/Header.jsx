@@ -9,7 +9,15 @@ function Header() {
         component="header"
         sx={{ display: "flex", gap: 8, alignItems: "center", padding: 3 }}
       >
-        <Paper elevation={12} sx={{ borderRadius: 8, width: 0.5, height: 0.5 }}>
+        <Paper
+          elevation={12}
+          sx={{
+            borderRadius: 8,
+            width: 0.5,
+            height: 0.5,
+            display: { xs: "none", sm: "block" },
+          }}
+        >
           <Avatar
             alt="Lade Oshodi"
             src={ladeImg}

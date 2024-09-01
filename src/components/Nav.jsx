@@ -10,6 +10,7 @@ function Nav() {
           alignItems: "center",
           justifyContent: "space-around",
           textAlign: "center",
+          flexWrap: "wrap",
           p: 1,
           marginBottom: 1,
           backgroundColor: "white",
