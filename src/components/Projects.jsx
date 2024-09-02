@@ -1,7 +1,6 @@
 import {
   Box,
   Typography,
-  Icon,
   styled,
   Accordion,
   AccordionSummary,
@@ -17,6 +16,7 @@ import LanguageIcon from "@mui/icons-material/Language";
 import HtmlIcon from "@mui/icons-material/Html";
 import CssIcon from "@mui/icons-material/Css";
 import JavascriptIcon from "@mui/icons-material/Javascript";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faReact } from "@fortawesome/free-brands-svg-icons";
 
@@ -85,7 +85,7 @@ const ProjectContainer = styled(Accordion)({
 const ProjectSummary = styled((props) => {
   return (
     <AccordionSummary
-      expandIcon={<Icon sx={{ fontSize: "0.9rem" }}>arrow_forward_ios</Icon>}
+      expandIcon={<ArrowForwardIosIcon sx={{ fontSize: "0.9rem" }} />}
       {...props}
     />
   );
@@ -239,7 +239,7 @@ function Projects() {
           rel="noreferrer"
           target="_blank"
           variant="contained"
-          sx={{ backgroundColor: "#da0064" }}
+          sx={{ backgroundColor: "#da0064", marginBottom: "16px" }}
         >
           See More on GitHub
         </Button>
