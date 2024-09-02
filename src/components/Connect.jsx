@@ -19,6 +19,7 @@ function Connect() {
         color: "white",
         display: "flex",
         gap: "24px",
+        justifyContent: "space-between",
       }}
     >
       <Box>

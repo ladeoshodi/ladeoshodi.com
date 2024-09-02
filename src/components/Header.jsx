@@ -24,10 +24,10 @@ function Header() {
             sx={{ width: 1, height: 1, borderRadius: 8 }}
           />
         </Paper>
-        <Box>
+        <Box sx={{ textAlign: "right" }}>
           <Typography
-            component="h2"
-            variant="h2"
+            component="h1"
+            variant="h1"
             sx={{
               color: "transparent",
               backgroundClip: "text",
@@ -37,7 +37,7 @@ function Header() {
           >
             HI 👋🏾, I&apos;M LADE
           </Typography>
-          <Typography component="h6" variant="h6">
+          <Typography component="h5" variant="h5">
             I am a{" "}
             <Box
               component="span"
