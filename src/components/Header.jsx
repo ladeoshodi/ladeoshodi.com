@@ -24,17 +24,30 @@ function Header() {
             sx={{ width: 1, height: 1, borderRadius: 8 }}
           />
         </Paper>
-        <Typography
-          component="h2"
-          variant="h2"
-          sx={{
-            color: "transparent",
-            backgroundClip: "text",
-            backgroundImage: "linear-gradient(to right, #da0064, #261414)",
-          }}
-        >
-          HI 👋🏾, I&apos;M LADE AND I LOVE BUILDING DIGITAL PRODUCTS
-        </Typography>
+        <Box>
+          <Typography
+            component="h2"
+            variant="h2"
+            sx={{
+              color: "transparent",
+              backgroundClip: "text",
+              backgroundImage: "linear-gradient(to right, #da0064, #261414)",
+              mb: 1,
+            }}
+          >
+            HI 👋🏾, I&apos;M LADE
+          </Typography>
+          <Typography component="h6" variant="h6">
+            I am a{" "}
+            <Box
+              component="span"
+              sx={{ color: "#da0064", fontStyle: "italic" }}
+            >
+              Full-Stack Developer
+            </Box>{" "}
+            with a background in product management
+          </Typography>
+        </Box>
       </Box>
     </>
   );

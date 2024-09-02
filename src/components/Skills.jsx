@@ -47,17 +47,28 @@ function Skills() {
             Web Development
           </Typography>
           <Typography>
-            <strong>Languages</strong> - HTML | CSS | Javascript | Python
+            <Box component="span" sx={{ fontWeight: "bold" }}>
+              Languages
+            </Box>{" "}
+            - HTML | CSS | Javascript | Python
           </Typography>
           <Typography>
-            <strong>Libraries and Frameworks</strong> - ReactJS | NodeJS |
-            ExpressJS | Jest | Django | MaterialUI
+            <Box component="span" sx={{ fontWeight: "bold" }}>
+              Libraries and Frameworks
+            </Box>{" "}
+            - ReactJS | NodeJS | ExpressJS | Jest | Django | MaterialUI
           </Typography>
           <Typography>
-            <strong>Databases</strong> - SQL | PostgreSQL | MongoDB
+            <Box component="span" sx={{ fontWeight: "bold" }}>
+              Databases
+            </Box>{" "}
+            - SQL | PostgreSQL | MongoDB
           </Typography>
           <Typography>
-            <strong>Other</strong> - GIT | Github | RESTful APIs
+            <Box component="span" sx={{ fontWeight: "bold" }}>
+              Other
+            </Box>{" "}
+            - GIT | Github | RESTful APIs
           </Typography>
         </Card>
         <Card>

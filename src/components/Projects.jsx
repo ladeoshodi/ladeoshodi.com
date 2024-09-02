@@ -1,4 +1,5 @@
 import {
+  Box,
   Typography,
   Icon,
   styled,
@@ -9,6 +10,58 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 
+// Projects
+const projects = [
+  {
+    name: "Minesweeper",
+    summary: "Grid based browser game",
+    tags: "HTML, CSS, JS",
+    image: {
+      imgUrl:
+        "https://github.com/ladeoshodi/minesweeper/raw/main/assets/minesweeper.png",
+      alt: "minesweeper",
+    },
+    description:
+      "A web version of the classic Minesweeper game, test how quickly you can find all the mines in the field",
+    links: {
+      github: "https://github.com/ladeoshodi/minesweeper",
+      live: "https://ladeoshodi.github.io/minesweeper/",
+    },
+  },
+  {
+    name: "Browser Calculator",
+    summary: "Simple Calculator on the Browser",
+    tags: "HTML, CSS, JS",
+    image: {
+      imgUrl:
+        "https://github.com/ladeoshodi/browser-calculator/raw/main/image.png",
+      alt: "calculator",
+    },
+    description:
+      "A simple web calculator for evaluating additions, subtractions, divisions, multiplications and percentages",
+    links: {
+      github: "https://github.com/ladeoshodi/browser-calculator",
+      live: "https://ladeoshodi.github.io/browser-calculator/",
+    },
+  },
+  {
+    name: "Search-A-Word",
+    summary: "Dictionary API",
+    tags: "ReactJS",
+    image: {
+      imgUrl:
+        "https://github.com/ladeoshodi/search-a-word/raw/main/src/assets/search-a-word.png",
+      alt: "search a word",
+    },
+    description: "Search for any word using a free dictionary API",
+    links: {
+      github: "https://github.com/ladeoshodi/search-a-word",
+      live: "https://search-a-word.netlify.app/",
+    },
+  },
+];
+
+// Styled components
 const ProjectContainer = styled(Accordion)({
   border: "1px solid rgba(0, 0, 0, 0.12)",
   "&:not(:last-child)": {
@@ -47,6 +100,7 @@ const ProjectDetails = styled(AccordionDetails)({
 });
 
 const LinkWrapper = styled("div")({
+  marginTop: "8px",
   "@media(max-width: 500px)": {
     display: "flex",
     flexDirection: "column",
@@ -78,70 +132,63 @@ function Projects() {
         Projects
       </Typography>
       <div style={{ padding: "16px" }}>
-        <ProjectContainer
-          expanded={expanded === "panel1"}
-          onChange={handleChange("panel1")}
-        >
-          <ProjectSummary aria-controls="panel1-content" id="panel1-header">
-            <div>
-              <Typography>Minesweeper</Typography>
-              <Typography sx={{ fontWeight: "lighter" }}>
-                Grid based browser game
-              </Typography>
-            </div>
-          </ProjectSummary>
-          <ProjectDetails>
-            <img
-              src="https://github.com/ladeoshodi/minesweeper/raw/main/assets/minesweeper.png"
-              alt="minesweeper"
-              style={{ width: "30%" }}
-            ></img>
-            <Typography>
-              Minesweeper is a game where mines are hidden in a grid of squares.
-              Each square within the grid is either a safe square safe square ,
-              a blank square blank square or a mine Minesweeper Logo. Safe
-              squares have numbers telling you how many mines touch the square.
-              You can use the number clues to solve the game by opening all of
-              the safe squares. If you click on a mine you lose the game!{" "}
-              <Typography>
-                <strong>
-                  To win, you must correctly flag flagged square all the mines
-                  in the grid!
-                </strong>
-              </Typography>
-              <LinkWrapper>
-                <Link
-                  href="https://github.com/ladeoshodi/minesweeper"
-                  color="#da0064"
-                >
-                  See it on Github{" "}
-                  <Icon sx={{ fontSize: "1rem", mr: 1 }}>code</Icon>
-                </Link>
-                <Link
-                  href="https://ladeoshodi.github.io/minesweeper/"
-                  color="#da0064"
-                >
-                  See it Live <Icon sx={{ fontSize: "1rem" }}>language</Icon>
-                </Link>
-              </LinkWrapper>
-            </Typography>
-          </ProjectDetails>
-        </ProjectContainer>
-        <ProjectContainer
-          expanded={expanded === "panel2"}
-          onChange={handleChange("panel2")}
-        >
-          <ProjectSummary aria-controls="panel2-content" id="panel2-header">
-            <Typography>Accordion 2</Typography>
-          </ProjectSummary>
-          <ProjectDetails>
-            <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-              eget.
-            </Typography>
-          </ProjectDetails>
-        </ProjectContainer>
+        {projects.map((project, idx) => {
+          return (
+            <ProjectContainer
+              key={project.name}
+              expanded={expanded === `panel${idx}`}
+              onChange={handleChange(`panel${idx}`)}
+            >
+              <ProjectSummary aria-controls="panel1-content" id="panel1-header">
+                <Box>
+                  <Typography>{project.name}</Typography>
+                  <Typography sx={{ fontWeight: "lighter" }}>
+                    {project.summary}
+                  </Typography>
+                  <Typography
+                    sx={{
+                      fontWeight: "lighter",
+                      fontStyle: "italic",
+                      fontSize: "small",
+                    }}
+                  >
+                    Technologies: {project.tags}
+                  </Typography>
+                </Box>
+              </ProjectSummary>
+              <ProjectDetails>
+                <img
+                  src={project.image.imgUrl}
+                  alt={project.image.alt}
+                  style={{ width: "30%" }}
+                ></img>
+                <Box>
+                  <Typography>{project.description}</Typography>
+                  <LinkWrapper>
+                    <Link
+                      href={project.links.github}
+                      color="#da0064"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      See it on Github{" "}
+                      <Icon sx={{ fontSize: "1rem", mr: 1 }}>code</Icon>
+                    </Link>
+                    <Link
+                      href={project.links.live}
+                      color="#da0064"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      See it Live{" "}
+                      <Icon sx={{ fontSize: "1rem" }}>language</Icon>
+                    </Link>
+                  </LinkWrapper>
+                </Box>
+              </ProjectDetails>
+            </ProjectContainer>
+          );
+        })}
       </div>
     </>
   );
