@@ -4,8 +4,9 @@ import ComputerIcon from "@mui/icons-material/Computer";
 import WorkIcon from "@mui/icons-material/Work";
 import BuildIcon from "@mui/icons-material/Build";
 import StarIcon from "@mui/icons-material/Star";
+import { forwardRef } from "react";
 
-function Skills() {
+const Skills = forwardRef(function Skills(prop, skillsRef) {
   const Card = styled(Paper)({
     display: "flex",
     flexDirection: "column",
@@ -23,7 +24,7 @@ function Skills() {
   });
 
   return (
-    <>
+    <div ref={skillsRef}>
       <Typography
         component="h3"
         variant="h3"
@@ -109,8 +110,8 @@ function Skills() {
           </Typography>
         </Card>
       </Box>
-    </>
+    </div>
   );
-}
+});
 
 export default Skills;

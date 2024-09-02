@@ -1,10 +1,11 @@
 import { Box, Avatar, Paper, Typography } from "@mui/material";
+import { forwardRef } from "react";
 
 import ladeImg from "../assets/lade-oshodi.jpeg";
 
-function Header() {
+const Header = forwardRef(function Header(prop, headerRef) {
   return (
-    <>
+    <div ref={headerRef}>
       <Box
         component="header"
         sx={{ display: "flex", gap: 8, alignItems: "center", padding: 3 }}
@@ -49,8 +50,8 @@ function Header() {
           </Typography>
         </Box>
       </Box>
-    </>
+    </div>
   );
-}
+});
 
 export default Header;

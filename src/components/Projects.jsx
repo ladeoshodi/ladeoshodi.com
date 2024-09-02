@@ -19,6 +19,7 @@ import JavascriptIcon from "@mui/icons-material/Javascript";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faReact } from "@fortawesome/free-brands-svg-icons";
+import { forwardRef } from "react";
 
 // Projects
 const projects = [
@@ -124,7 +125,7 @@ const ListItem = styled("li")({
   fontSize: "small",
 });
 
-function Projects() {
+const Projects = forwardRef(function Projects(prop, projectsRef) {
   const [expanded, setExpanded] = useState("");
 
   function handleChange(panel) {
@@ -134,7 +135,7 @@ function Projects() {
   }
 
   return (
-    <>
+    <div ref={projectsRef}>
       <Typography
         component="h3"
         variant="h3"
@@ -244,8 +245,8 @@ function Projects() {
           See More on GitHub
         </Button>
       </Box>
-    </>
+    </div>
   );
-}
+});
 
 export default Projects;

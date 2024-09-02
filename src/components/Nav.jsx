@@ -1,12 +1,16 @@
 import { Box, Typography, styled } from "@mui/material";
 
-function Nav() {
+function Nav({ headerRef, skillsRef, projectsRef, connectRef }) {
   const NavItem = styled(Typography)({
     "&:hover": {
       cursor: "pointer",
       color: "#da0064",
     },
   });
+
+  function handleClick(pageRef) {
+    pageRef.current.scrollIntoView({ behavior: "smooth" });
+  }
 
   return (
     <>
@@ -22,10 +26,10 @@ function Nav() {
           backgroundColor: "white",
         }}
       >
-        <NavItem>Home</NavItem>
-        <NavItem>Skills</NavItem>
-        <NavItem>Projects</NavItem>
-        <NavItem>Connect</NavItem>
+        <NavItem onClick={() => handleClick(headerRef)}>Home</NavItem>
+        <NavItem onClick={() => handleClick(skillsRef)}>Skills</NavItem>
+        <NavItem onClick={() => handleClick(projectsRef)}>Projects</NavItem>
+        <NavItem onClick={() => handleClick(connectRef)}>Connect</NavItem>
       </Box>
     </>
   );
