@@ -8,7 +8,7 @@ import {
   AccordionDetails,
   Link,
   Chip,
-  Paper,
+  Button,
 } from "@mui/material";
 import { useState } from "react";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -147,89 +147,102 @@ function Projects() {
         <Icon sx={{ fontSize: "2.2rem", mr: 1 }}>business</Icon>
         Projects
       </Typography>
-      <div style={{ padding: "16px" }}>
-        {projects.map((project, idx) => {
-          return (
-            <ProjectContainer
-              key={project.name}
-              expanded={expanded === `panel${idx}`}
-              onChange={handleChange(`panel${idx}`)}
-            >
-              <ProjectSummary
-                aria-controls={`panel${idx}-content`}
-                id={`panel${idx}-header`}
+      <Box
+        sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
+      >
+        <div style={{ padding: "16px" }}>
+          {projects.map((project, idx) => {
+            return (
+              <ProjectContainer
+                key={project.name}
+                expanded={expanded === `panel${idx}`}
+                onChange={handleChange(`panel${idx}`)}
               >
-                <Box>
-                  <Typography>{project.name}</Typography>
-                  <Typography sx={{ fontWeight: "lighter" }}>
-                    {project.summary}
-                  </Typography>
-                  <Box
-                    component="ul"
-                    sx={{
-                      display: "flex",
-                      justifyContent: "center",
-                      flexWrap: "wrap",
-                      listStyle: "none",
-                      p: 0.5,
-                      m: 0,
-                    }}
-                  >
-                    {project.tags.map((tag) => {
-                      let icon;
+                <ProjectSummary
+                  aria-controls={`panel${idx}-content`}
+                  id={`panel${idx}-header`}
+                >
+                  <Box>
+                    <Typography>{project.name}</Typography>
+                    <Typography sx={{ fontWeight: "lighter" }}>
+                      {project.summary}
+                    </Typography>
+                    <Box
+                      component="ul"
+                      sx={{
+                        display: "flex",
+                        justifyContent: "center",
+                        flexWrap: "wrap",
+                        listStyle: "none",
+                        p: 0.5,
+                        m: 0,
+                      }}
+                    >
+                      {project.tags.map((tag) => {
+                        let icon;
 
-                      if (tag === "HTML") {
-                        icon = <HtmlIcon />;
-                      } else if (tag === "CSS") {
-                        icon = <CssIcon />;
-                      } else if (tag === "JavaScript") {
-                        icon = <JavascriptIcon />;
-                      } else if (tag === "ReactJS") {
-                        icon = <FontAwesomeIcon icon={faReact} />;
-                      }
-                      return (
-                        <ListItem key={tag}>
-                          <Chip icon={icon} label={tag} sx={{ p: 1 }} />
-                        </ListItem>
-                      );
-                    })}
+                        if (tag === "HTML") {
+                          icon = <HtmlIcon />;
+                        } else if (tag === "CSS") {
+                          icon = <CssIcon />;
+                        } else if (tag === "JavaScript") {
+                          icon = <JavascriptIcon />;
+                        } else if (tag === "ReactJS") {
+                          icon = <FontAwesomeIcon icon={faReact} />;
+                        }
+                        return (
+                          <ListItem key={tag}>
+                            <Chip icon={icon} label={tag} sx={{ p: 1 }} />
+                          </ListItem>
+                        );
+                      })}
+                    </Box>
                   </Box>
-                </Box>
-              </ProjectSummary>
-              <ProjectDetails>
-                <img
-                  src={project.image.imgUrl}
-                  alt={project.image.alt}
-                  style={{ width: "30%" }}
-                ></img>
-                <Box>
-                  <Typography>{project.description}</Typography>
-                  <LinkWrapper>
-                    <Link
-                      href={project.links.github}
-                      color="#da0064"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      See it on Github{" "}
-                      <GitHubIcon sx={{ fontSize: "1rem", mr: 1 }} />
-                    </Link>
-                    <Link
-                      href={project.links.live}
-                      color="#da0064"
-                      target="_blank"
-                      rel="noreferrer"
-                    >
-                      See it Live{" "}
-                      <LanguageIcon sx={{ fontSize: "1rem", mr: 1 }} />
-                    </Link>
-                  </LinkWrapper>
-                </Box>
-              </ProjectDetails>
-            </ProjectContainer>
-          );
-        })}
-      </div>
+                </ProjectSummary>
+                <ProjectDetails>
+                  <img
+                    src={project.image.imgUrl}
+                    alt={project.image.alt}
+                    style={{ width: "30%" }}
+                  ></img>
+                  <Box>
+                    <Typography>{project.description}</Typography>
+                    <LinkWrapper>
+                      <Link
+                        href={project.links.github}
+                        color="#da0064"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        See it on Github{" "}
+                        <GitHubIcon sx={{ fontSize: "1rem", mr: 1 }} />
+                      </Link>
+                      <Link
+                        href={project.links.live}
+                        color="#da0064"
+                        target="_blank"
+                        rel="noreferrer"
+                      >
+                        See it Live{" "}
+                        <LanguageIcon sx={{ fontSize: "1rem", mr: 1 }} />
+                      </Link>
+                    </LinkWrapper>
+                  </Box>
+                </ProjectDetails>
+              </ProjectContainer>
+            );
+          })}
+        </div>
+        <Button
+          href="https://github.com/ladeoshodi"
+          rel="noreferrer"
+          target="_blank"
+          variant="contained"
+          sx={{ backgroundColor: "#da0064" }}
+        >
+          See More on GitHub
+        </Button>
+      </Box>
     </>
   );
 }
