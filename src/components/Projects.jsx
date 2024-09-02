@@ -7,15 +7,24 @@ import {
   AccordionSummary,
   AccordionDetails,
   Link,
+  Chip,
+  Paper,
 } from "@mui/material";
 import { useState } from "react";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LanguageIcon from "@mui/icons-material/Language";
+import HtmlIcon from "@mui/icons-material/Html";
+import CssIcon from "@mui/icons-material/Css";
+import JavascriptIcon from "@mui/icons-material/Javascript";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faReact } from "@fortawesome/free-brands-svg-icons";
 
 // Projects
 const projects = [
   {
     name: "Minesweeper",
     summary: "Grid based browser game",
-    tags: "HTML, CSS, JS",
+    tags: ["HTML", "CSS", "JavaScript"],
     image: {
       imgUrl:
         "https://github.com/ladeoshodi/minesweeper/raw/main/assets/minesweeper.png",
@@ -31,7 +40,7 @@ const projects = [
   {
     name: "Browser Calculator",
     summary: "Simple Calculator on the Browser",
-    tags: "HTML, CSS, JS",
+    tags: ["HTML", "CSS", "JavaScript"],
     image: {
       imgUrl:
         "https://github.com/ladeoshodi/browser-calculator/raw/main/image.png",
@@ -47,7 +56,7 @@ const projects = [
   {
     name: "Search-A-Word",
     summary: "Dictionary API",
-    tags: "ReactJS",
+    tags: ["HTML", "CSS", "JavaScript", "ReactJS"],
     image: {
       imgUrl:
         "https://github.com/ladeoshodi/search-a-word/raw/main/src/assets/search-a-word.png",
@@ -107,8 +116,15 @@ const LinkWrapper = styled("div")({
   },
 });
 
+const ListItem = styled("li")({
+  margin: "4px",
+  fontWeight: "lighter",
+  fontStyle: "italic",
+  fontSize: "small",
+});
+
 function Projects() {
-  const [expanded, setExpanded] = useState("panel1");
+  const [expanded, setExpanded] = useState("");
 
   function handleChange(panel) {
     return (event, newExpanded) => {
@@ -139,21 +155,45 @@ function Projects() {
               expanded={expanded === `panel${idx}`}
               onChange={handleChange(`panel${idx}`)}
             >
-              <ProjectSummary aria-controls="panel1-content" id="panel1-header">
+              <ProjectSummary
+                aria-controls={`panel${idx}-content`}
+                id={`panel${idx}-header`}
+              >
                 <Box>
                   <Typography>{project.name}</Typography>
                   <Typography sx={{ fontWeight: "lighter" }}>
                     {project.summary}
                   </Typography>
-                  <Typography
+                  <Box
+                    component="ul"
                     sx={{
-                      fontWeight: "lighter",
-                      fontStyle: "italic",
-                      fontSize: "small",
+                      display: "flex",
+                      justifyContent: "center",
+                      flexWrap: "wrap",
+                      listStyle: "none",
+                      p: 0.5,
+                      m: 0,
                     }}
                   >
-                    Technologies: {project.tags}
-                  </Typography>
+                    {project.tags.map((tag) => {
+                      let icon;
+
+                      if (tag === "HTML") {
+                        icon = <HtmlIcon />;
+                      } else if (tag === "CSS") {
+                        icon = <CssIcon />;
+                      } else if (tag === "JavaScript") {
+                        icon = <JavascriptIcon />;
+                      } else if (tag === "ReactJS") {
+                        icon = <FontAwesomeIcon icon={faReact} />;
+                      }
+                      return (
+                        <ListItem key={tag}>
+                          <Chip icon={icon} label={tag} sx={{ p: 1 }} />
+                        </ListItem>
+                      );
+                    })}
+                  </Box>
                 </Box>
               </ProjectSummary>
               <ProjectDetails>
@@ -172,7 +212,7 @@ function Projects() {
                       rel="noreferrer"
                     >
                       See it on Github{" "}
-                      <Icon sx={{ fontSize: "1rem", mr: 1 }}>code</Icon>
+                      <GitHubIcon sx={{ fontSize: "1rem", mr: 1 }} />
                     </Link>
                     <Link
                       href={project.links.live}
@@ -181,7 +221,7 @@ function Projects() {
                       rel="noreferrer"
                     >
                       See it Live{" "}
-                      <Icon sx={{ fontSize: "1rem" }}>language</Icon>
+                      <LanguageIcon sx={{ fontSize: "1rem", mr: 1 }} />
                     </Link>
                   </LinkWrapper>
                 </Box>
