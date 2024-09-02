@@ -11,6 +11,7 @@ import {
   Button,
 } from "@mui/material";
 import { useState } from "react";
+import BusinessIcon from "@mui/icons-material/Business";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LanguageIcon from "@mui/icons-material/Language";
 import HtmlIcon from "@mui/icons-material/Html";
@@ -144,7 +145,7 @@ function Projects() {
           },
         }}
       >
-        <Icon sx={{ fontSize: "2.2rem", mr: 1 }}>business</Icon>
+        <BusinessIcon sx={{ fontSize: "2.2rem", mr: 1 }} />
         Projects
       </Typography>
       <Box

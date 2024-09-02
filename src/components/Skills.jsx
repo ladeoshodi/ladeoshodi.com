@@ -1,4 +1,9 @@
-import { Box, Typography, Icon, styled, Paper } from "@mui/material";
+import { Box, Typography, styled, Paper } from "@mui/material";
+import ConstructionIcon from "@mui/icons-material/Construction";
+import ComputerIcon from "@mui/icons-material/Computer";
+import WorkIcon from "@mui/icons-material/Work";
+import BuildIcon from "@mui/icons-material/Build";
+import StarIcon from "@mui/icons-material/Star";
 
 function Skills() {
   const Card = styled(Paper)({
@@ -29,7 +34,7 @@ function Skills() {
           },
         }}
       >
-        <Icon sx={{ fontSize: "2.2rem", mr: 1 }}>construction</Icon>
+        <ConstructionIcon sx={{ fontSize: "2.2rem", mr: 1 }} />
         Skills
       </Typography>
       <Box
@@ -42,7 +47,7 @@ function Skills() {
         }}
       >
         <Card>
-          <Icon sx={{ fontSize: "2.2rem" }}>computer</Icon>
+          <ComputerIcon sx={{ fontSize: "2.2rem" }} />
           <Typography sx={{ fontWeight: "bold", fontSize: "1.2rem" }}>
             Web Development
           </Typography>
@@ -72,7 +77,7 @@ function Skills() {
           </Typography>
         </Card>
         <Card>
-          <Icon sx={{ fontSize: "2.2rem" }}>work</Icon>
+          <WorkIcon sx={{ fontSize: "2.2rem" }} />
           <Typography sx={{ fontWeight: "bold", fontSize: "1.2rem" }}>
             Business
           </Typography>
@@ -84,7 +89,7 @@ function Skills() {
           </Typography>
         </Card>
         <Card>
-          <Icon sx={{ fontSize: "2.2rem" }}>build</Icon>
+          <BuildIcon sx={{ fontSize: "2.2rem" }} />
           <Typography sx={{ fontWeight: "bold", fontSize: "1.2rem" }}>
             Tools
           </Typography>
@@ -94,7 +99,7 @@ function Skills() {
           </Typography>
         </Card>
         <Card>
-          <Icon sx={{ fontSize: "2.2rem" }}>star</Icon>
+          <StarIcon sx={{ fontSize: "2.2rem" }} />
           <Typography sx={{ fontWeight: "bold", fontSize: "1.2rem" }}>
             People
           </Typography>
