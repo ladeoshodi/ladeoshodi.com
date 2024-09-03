@@ -10,7 +10,7 @@ const baseUrl = "ladeoshodi.com";
 const router = createBrowserRouter([
   {
     path: `/${baseUrl}`,
-    element: <App />,
+    element: <App baseUrl={baseUrl} />,
   },
   {
     path: `/${baseUrl}/about-me`,
