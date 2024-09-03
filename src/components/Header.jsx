@@ -1,6 +1,6 @@
 import { Box, Avatar, Paper, Typography } from "@mui/material";
 import { forwardRef } from "react";
-import { Link } from "react-router-dom";
+import { Link as AnchorLink } from "react-router-dom";
 
 import ladeImg from "../assets/lade-oshodi.jpeg";
 
@@ -38,7 +38,7 @@ const Header = forwardRef(function Header(prop, headerRef) {
             }}
           >
             HI 👋🏾, I&apos;M{" "}
-            <Link
+            <AnchorLink
               to={`/${prop.baseUrl}/about-me`}
               style={{
                 color: "inherit",
@@ -46,7 +46,7 @@ const Header = forwardRef(function Header(prop, headerRef) {
               }}
             >
               LADE
-            </Link>
+            </AnchorLink>
           </Typography>
           <Typography component="h5" variant="h5">
             I am a{" "}

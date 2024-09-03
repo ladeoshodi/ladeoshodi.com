@@ -14,7 +14,7 @@ const router = createBrowserRouter([
   },
   {
     path: `/${baseUrl}/about-me`,
-    element: <AboutMe />,
+    element: <AboutMe baseUrl={baseUrl} />,
   },
 ]);
 
