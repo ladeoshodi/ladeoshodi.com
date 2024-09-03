@@ -5,16 +5,14 @@ import AboutMe from "./components/AboutMe.jsx";
 import App from "./App.jsx";
 import "./index.css";
 
-const baseUrl = "ladeoshodi.com";
-
 const router = createBrowserRouter([
   {
-    path: `/${baseUrl}`,
-    element: <App baseUrl={baseUrl} />,
+    path: "/",
+    element: <App />,
   },
   {
-    path: `/${baseUrl}/about-me`,
-    element: <AboutMe baseUrl={baseUrl} />,
+    path: "/about-me",
+    element: <AboutMe />,
   },
 ]);
 

@@ -6,7 +6,7 @@ import Connect from "./components/Connect";
 import Footer from "./components/Footer";
 import { useRef } from "react";
 
-function App({ baseUrl }) {
+function App() {
   const headerRef = useRef(null);
   const skillsRef = useRef(null);
   const projectsRef = useRef(null);
@@ -20,7 +20,7 @@ function App({ baseUrl }) {
         projectsRef={projectsRef}
         connectRef={connectRef}
       />
-      <Header baseUrl={baseUrl} ref={headerRef} />
+      <Header ref={headerRef} />
       <Skills ref={skillsRef} />
       <Projects ref={projectsRef} />
       <Connect ref={connectRef} />

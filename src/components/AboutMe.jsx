@@ -1,14 +1,11 @@
 import { Typography, Breadcrumbs } from "@mui/material";
 import { Link as AnchorLink } from "react-router-dom";
 
-function AboutMe({ baseUrl }) {
+function AboutMe() {
   return (
     <>
       <Breadcrumbs aria-label="breadcrumb" sx={{ p: 2 }}>
-        <AnchorLink
-          to={`/${baseUrl}/`}
-          style={{ underline: "hover", color: "inherit" }}
-        >
+        <AnchorLink to="/" style={{ underline: "hover", color: "inherit" }}>
           Home
         </AnchorLink>
         <Typography sx={{ color: "text.primary" }}>About Me</Typography>

@@ -39,7 +39,7 @@ const Header = forwardRef(function Header(prop, headerRef) {
           >
             HI 👋🏾, I&apos;M{" "}
             <AnchorLink
-              to={`/${prop.baseUrl}/about-me`}
+              to="/about-me"
               style={{
                 color: "inherit",
                 textDecoration: "#261414 wavy underline",
