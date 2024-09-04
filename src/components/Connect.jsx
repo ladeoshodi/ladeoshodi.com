@@ -2,7 +2,6 @@ import { Box, Typography, ButtonGroup, styled } from "@mui/material";
 import MailOutlineIcon from "@mui/icons-material/MailOutline";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import { forwardRef } from "react";
 
 const ConnectIcons = styled("a")({
   color: "white",
@@ -11,9 +10,9 @@ const ConnectIcons = styled("a")({
   },
 });
 
-const Connect = forwardRef(function Connect(prop, connectRef) {
+function Connect() {
   return (
-    <div ref={connectRef}>
+    <>
       <Box
         sx={{
           backgroundColor: "#da0064",
@@ -62,8 +61,8 @@ const Connect = forwardRef(function Connect(prop, connectRef) {
           </ConnectIcons>
         </ButtonGroup>
       </Box>
-    </div>
+    </>
   );
-});
+}
 
 export default Connect;
