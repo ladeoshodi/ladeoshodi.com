@@ -27,7 +27,11 @@ function AboutMe() {
         <Typography component="h1" variant="h1">
           Lade Oshodi
         </Typography>
-        <Typography component="h5" variant="h5" sx={{ fontWeight: 300, mb: 2 }}>
+        <Typography
+          component="h5"
+          variant="h5"
+          sx={{ fontWeight: 300, mb: 2, color: "#da0064" }}
+        >
           Software Engineering | Product Management | User Experience
         </Typography>
         <Box>
