@@ -1,12 +1,10 @@
 import { Box, Avatar, Paper, Typography } from "@mui/material";
-import { forwardRef } from "react";
-import { Link as AnchorLink } from "react-router-dom";
 
 import ladeImg from "../assets/lade-oshodi.jpeg";
 
-const Header = forwardRef(function Header(prop, headerRef) {
+function Header() {
   return (
-    <div ref={headerRef}>
+    <div>
       <Box
         component="header"
         sx={{ display: "flex", gap: 8, alignItems: "center", padding: 3 }}
@@ -37,16 +35,7 @@ const Header = forwardRef(function Header(prop, headerRef) {
               mb: 1,
             }}
           >
-            HI 👋🏾, I&apos;M{" "}
-            <AnchorLink
-              to="/about-me"
-              style={{
-                color: "inherit",
-                textDecoration: "#261414 wavy underline",
-              }}
-            >
-              LADE
-            </AnchorLink>
+            HI 👋🏾, I&apos;M LADE
           </Typography>
           <Typography component="h5" variant="h5">
             I am a{" "}
@@ -62,6 +51,6 @@ const Header = forwardRef(function Header(prop, headerRef) {
       </Box>
     </div>
   );
-});
+}
 
 export default Header;

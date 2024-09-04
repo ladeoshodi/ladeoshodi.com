@@ -7,7 +7,6 @@ import Footer from "./components/Footer";
 import { useRef } from "react";
 
 function App() {
-  const headerRef = useRef(null);
   const skillsRef = useRef(null);
   const projectsRef = useRef(null);
   const connectRef = useRef(null);
@@ -15,12 +14,11 @@ function App() {
   return (
     <>
       <Nav
-        headerRef={headerRef}
         skillsRef={skillsRef}
         projectsRef={projectsRef}
         connectRef={connectRef}
       />
-      <Header ref={headerRef} />
+      <Header />
       <Skills ref={skillsRef} />
       <Projects ref={projectsRef} />
       <Connect ref={connectRef} />

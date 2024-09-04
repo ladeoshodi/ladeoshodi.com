@@ -5,7 +5,7 @@ function AboutMe() {
   return (
     <>
       <Breadcrumbs aria-label="breadcrumb" sx={{ p: 2 }}>
-        <AnchorLink to="/" style={{ underline: "hover", color: "inherit" }}>
+        <AnchorLink to="/" style={{ color: "inherit" }}>
           Home
         </AnchorLink>
         <Typography sx={{ color: "text.primary" }}>About Me</Typography>

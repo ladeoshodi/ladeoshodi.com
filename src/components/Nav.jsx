@@ -1,6 +1,7 @@
 import { Box, Typography, styled } from "@mui/material";
+import { Link as AnchorLink } from "react-router-dom";
 
-function Nav({ headerRef, skillsRef, projectsRef, connectRef }) {
+function Nav({ skillsRef, projectsRef, connectRef }) {
   const NavItem = styled(Typography)({
     "&:hover": {
       cursor: "pointer",
@@ -26,7 +27,17 @@ function Nav({ headerRef, skillsRef, projectsRef, connectRef }) {
           backgroundColor: "white",
         }}
       >
-        <NavItem onClick={() => handleClick(headerRef)}>Home</NavItem>
+        <NavItem>
+          <AnchorLink
+            to="/about-me"
+            style={{
+              color: "inherit",
+              textDecoration: "none",
+            }}
+          >
+            About Me
+          </AnchorLink>
+        </NavItem>
         <NavItem onClick={() => handleClick(skillsRef)}>Skills</NavItem>
         <NavItem onClick={() => handleClick(projectsRef)}>Projects</NavItem>
         <NavItem onClick={() => handleClick(connectRef)}>Connect</NavItem>
