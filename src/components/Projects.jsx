@@ -8,6 +8,7 @@ import {
   Link,
   Chip,
   Button,
+  Grid2 as Grid,
 } from "@mui/material";
 import { useState } from "react";
 import BusinessIcon from "@mui/icons-material/Business";
@@ -21,12 +22,32 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faReact } from "@fortawesome/free-brands-svg-icons";
 import { forwardRef } from "react";
 
+const bulmaCSSIcon = (
+  <svg
+    width="13"
+    height="13"
+    viewBox="0 0 42 64"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      fillRule="evenodd"
+      clipRule="evenodd"
+      d="M0 44L3.81818 16L19.0909 0L38.1818 20L26.7273 32L42 48L19.0909 64L0 44Z"
+      fill="#616161"
+    />
+  </svg>
+);
 // Projects
 const projects = [
   {
     name: "Minesweeper",
     summary: "Grid based browser game",
-    tags: ["HTML", "CSS", "JavaScript"],
+    tags: [
+      { name: "HTML", icon: <HtmlIcon /> },
+      { name: "CSS", icon: <CssIcon /> },
+      { name: "JavaScript", icon: <JavascriptIcon /> },
+    ],
     image: {
       imgUrl:
         "https://github.com/ladeoshodi/minesweeper/raw/main/assets/minesweeper.png",
@@ -38,11 +59,16 @@ const projects = [
       github: "https://github.com/ladeoshodi/minesweeper",
       live: "https://ladeoshodi.github.io/minesweeper/",
     },
+    size: "auto",
   },
   {
     name: "Browser Calculator",
     summary: "Simple Calculator on the Browser",
-    tags: ["HTML", "CSS", "JavaScript"],
+    tags: [
+      { name: "HTML", icon: <HtmlIcon /> },
+      { name: "CSS", icon: <CssIcon /> },
+      { name: "JavaScript", icon: <JavascriptIcon /> },
+    ],
     image: {
       imgUrl:
         "https://github.com/ladeoshodi/browser-calculator/raw/main/image.png",
@@ -54,11 +80,17 @@ const projects = [
       github: "https://github.com/ladeoshodi/browser-calculator",
       live: "https://ladeoshodi.github.io/browser-calculator/",
     },
+    size: "auto",
   },
   {
     name: "Search-A-Word",
     summary: "Dictionary API",
-    tags: ["HTML", "CSS", "JavaScript", "ReactJS"],
+    tags: [
+      { name: "HTML", icon: <HtmlIcon /> },
+      { name: "CSS", icon: <CssIcon /> },
+      { name: "JavaScript", icon: <JavascriptIcon /> },
+      { name: "ReactJS", icon: <FontAwesomeIcon icon={faReact} /> },
+    ],
     image: {
       imgUrl:
         "https://github.com/ladeoshodi/search-a-word/raw/main/src/assets/search-a-word.png",
@@ -69,6 +101,29 @@ const projects = [
       github: "https://github.com/ladeoshodi/search-a-word",
       live: "https://search-a-word.netlify.app/",
     },
+    size: "auto",
+  },
+  {
+    name: "A Harry Potter Quiz Game",
+    summary: "Quiz Game",
+    tags: [
+      { name: "HTML", icon: <HtmlIcon /> },
+      { name: "CSS", icon: <CssIcon /> },
+      { name: "JavaScript", icon: <JavascriptIcon /> },
+      { name: "ReactJS", icon: <FontAwesomeIcon icon={faReact} /> },
+      { name: "Bulma CSS", icon: bulmaCSSIcon },
+    ],
+    image: {
+      imgUrl:
+        "https://private-user-images.githubusercontent.com/174737263/365114502-cf2ea972-3d20-475b-a82c-ff1e9c9c91b7.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjU3MDgxNzcsIm5iZiI6MTcyNTcwNzg3NywicGF0aCI6Ii8xNzQ3MzcyNjMvMzY1MTE0NTAyLWNmMmVhOTcyLTNkMjAtNDc1Yi1hODJjLWZmMWU5YzljOTFiNy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwOTA3JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDkwN1QxMTE3NTdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0xYjM1N2UyZWEwYzFmNWNmMmE3MWViNzM1NGQ4ZDM0MjI5MDE1MzllYmEwNDRjOGVmNzFmYTUzMTQzZTBlYjNlJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.8hpRismhV_dWaf6haq8Kk8COabQUJvRb82kgOf30MGg",
+      alt: "harry potter quiz game",
+    },
+    description: "An interactive timed online quiz game",
+    links: {
+      github: "https://github.com/ladeoshodi/harry-potter-quiz-game",
+      live: "https://harry-potter-quiz-game.netlify.app",
+    },
+    size: "auto",
   },
 ];
 
@@ -152,19 +207,40 @@ const Projects = forwardRef(function Projects(prop, projectsRef) {
       <Box
         sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
       >
-        <div style={{ padding: "16px" }}>
+        <Grid
+          container
+          spacing={2}
+          sx={{
+            padding: "16px",
+            "@media(max-width: 500px)": {
+              flexDirection: "column",
+            },
+          }}
+        >
           {projects.map((project, idx) => {
             return (
-              <ProjectContainer
-                key={project.name}
-                expanded={expanded === `panel${idx}`}
-                onChange={handleChange(`panel${idx}`)}
-              >
-                <ProjectSummary
-                  aria-controls={`panel${idx}-content`}
-                  id={`panel${idx}-header`}
+              <Grid key={idx} size={project.size}>
+                <Box
+                  className="project-container"
+                  sx={{
+                    border: "1px solid rgba(0, 0, 0, 0.12)",
+                    backgroundColor: "white",
+                    display: "flex",
+                    gap: "10px",
+                    borderRadius: "5px",
+                    padding: "10px",
+                    "@media(max-width: 500px)": {
+                      flexDirection: "column",
+                    },
+                  }}
                 >
-                  <Box>
+                  <img
+                    src={project.image.imgUrl}
+                    alt={project.image.alt}
+                    style={{ width: "150px", height: "150px" }}
+                  ></img>
+
+                  <Box className="project-content">
                     <Typography>{project.name}</Typography>
                     <Typography sx={{ fontWeight: "lighter" }}>
                       {project.summary}
@@ -173,41 +249,24 @@ const Projects = forwardRef(function Projects(prop, projectsRef) {
                       component="ul"
                       sx={{
                         display: "flex",
-                        justifyContent: "center",
                         flexWrap: "wrap",
                         listStyle: "none",
                         p: 0.5,
                         m: 0,
                       }}
                     >
-                      {project.tags.map((tag) => {
-                        let icon;
-
-                        if (tag === "HTML") {
-                          icon = <HtmlIcon />;
-                        } else if (tag === "CSS") {
-                          icon = <CssIcon />;
-                        } else if (tag === "JavaScript") {
-                          icon = <JavascriptIcon />;
-                        } else if (tag === "ReactJS") {
-                          icon = <FontAwesomeIcon icon={faReact} />;
-                        }
+                      {project.tags.map((tag, idx) => {
                         return (
-                          <ListItem key={tag}>
-                            <Chip icon={icon} label={tag} sx={{ p: 1 }} />
+                          <ListItem key={idx}>
+                            <Chip
+                              icon={tag.icon}
+                              label={tag.name}
+                              sx={{ p: 0.5 }}
+                            />
                           </ListItem>
                         );
                       })}
                     </Box>
-                  </Box>
-                </ProjectSummary>
-                <ProjectDetails>
-                  <img
-                    src={project.image.imgUrl}
-                    alt={project.image.alt}
-                    style={{ width: "30%" }}
-                  ></img>
-                  <Box>
                     <Typography>{project.description}</Typography>
                     <LinkWrapper>
                       <Link
@@ -230,11 +289,11 @@ const Projects = forwardRef(function Projects(prop, projectsRef) {
                       </Link>
                     </LinkWrapper>
                   </Box>
-                </ProjectDetails>
-              </ProjectContainer>
+                </Box>
+              </Grid>
             );
           })}
-        </div>
+        </Grid>
         <Button
           href="https://github.com/ladeoshodi"
           rel="noreferrer"
