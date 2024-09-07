@@ -1,6 +1,6 @@
 import { Box, Avatar, Paper, Typography } from "@mui/material";
 
-import ladeImg from "../assets/lade-oshodi.jpeg";
+import ladeImg from "../assets/lade-oshodi.jpg";
 
 function Header() {
   return (

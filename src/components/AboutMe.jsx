@@ -7,7 +7,7 @@ import PeopleIcon from "@mui/icons-material/People";
 import GamesIcon from "@mui/icons-material/Games";
 import DrawIcon from "@mui/icons-material/Draw";
 
-import ladeBackground from "../assets/lade-oshodi.jpeg";
+import ladeBackground from "../assets/lade-oshodi.jpg";
 
 const Paragraph = styled(Typography)({
   marginBottom: "8px",

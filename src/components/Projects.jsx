@@ -2,25 +2,22 @@ import {
   Box,
   Typography,
   styled,
-  Accordion,
-  AccordionSummary,
-  AccordionDetails,
   Link,
   Chip,
   Button,
-  Grid2 as Grid,
+  Paper,
 } from "@mui/material";
-import { useState } from "react";
 import BusinessIcon from "@mui/icons-material/Business";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LanguageIcon from "@mui/icons-material/Language";
 import HtmlIcon from "@mui/icons-material/Html";
 import CssIcon from "@mui/icons-material/Css";
 import JavascriptIcon from "@mui/icons-material/Javascript";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faReact } from "@fortawesome/free-brands-svg-icons";
 import { forwardRef } from "react";
+
+import harryPotterGameImg from "../assets/harry-potter-game.png";
 
 const bulmaCSSIcon = (
   <svg
@@ -59,7 +56,7 @@ const projects = [
       github: "https://github.com/ladeoshodi/minesweeper",
       live: "https://ladeoshodi.github.io/minesweeper/",
     },
-    size: "auto",
+    size: { xs: "auto", sm: 6, md: 8 },
   },
   {
     name: "Browser Calculator",
@@ -114,8 +111,7 @@ const projects = [
       { name: "Bulma CSS", icon: bulmaCSSIcon },
     ],
     image: {
-      imgUrl:
-        "https://private-user-images.githubusercontent.com/174737263/365114502-cf2ea972-3d20-475b-a82c-ff1e9c9c91b7.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjU3MDgxNzcsIm5iZiI6MTcyNTcwNzg3NywicGF0aCI6Ii8xNzQ3MzcyNjMvMzY1MTE0NTAyLWNmMmVhOTcyLTNkMjAtNDc1Yi1hODJjLWZmMWU5YzljOTFiNy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwOTA3JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDkwN1QxMTE3NTdaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0xYjM1N2UyZWEwYzFmNWNmMmE3MWViNzM1NGQ4ZDM0MjI5MDE1MzllYmEwNDRjOGVmNzFmYTUzMTQzZTBlYjNlJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.8hpRismhV_dWaf6haq8Kk8COabQUJvRb82kgOf30MGg",
+      imgUrl: harryPotterGameImg,
       alt: "harry potter quiz game",
     },
     description: "An interactive timed online quiz game",
@@ -128,43 +124,6 @@ const projects = [
 ];
 
 // Styled components
-const ProjectContainer = styled(Accordion)({
-  border: "1px solid rgba(0, 0, 0, 0.12)",
-  "&:not(:last-child)": {
-    borderBottom: 0,
-  },
-  "&::before": {
-    display: "none",
-  },
-});
-
-const ProjectSummary = styled((props) => {
-  return (
-    <AccordionSummary
-      expandIcon={<ArrowForwardIosIcon sx={{ fontSize: "0.9rem" }} />}
-      {...props}
-    />
-  );
-})({
-  backgroundColor: "rgba(0, 0, 0, .03)",
-  flexDirection: "row-reverse",
-  "& .MuiAccordionSummary-expandIconWrapper.Mui-expanded": {
-    transform: "rotate(90deg)",
-  },
-  "& .MuiAccordionSummary-content": { marginLeft: "16px" },
-  "& .MuiAccordionSummary-content.Mui-expanded": { marginLeft: "16px" },
-});
-
-const ProjectDetails = styled(AccordionDetails)({
-  display: "flex",
-  gap: "16px",
-  padding: "16px",
-  borderTop: "1px solid rgba(0, 0, 0, .125)",
-  "@media(max-width: 500px)": {
-    flexWrap: "wrap",
-  },
-});
-
 const LinkWrapper = styled("div")({
   marginTop: "8px",
   "@media(max-width: 500px)": {
@@ -181,14 +140,6 @@ const ListItem = styled("li")({
 });
 
 const Projects = forwardRef(function Projects(prop, projectsRef) {
-  const [expanded, setExpanded] = useState("");
-
-  function handleChange(panel) {
-    return (event, newExpanded) => {
-      setExpanded(newExpanded ? panel : false);
-    };
-  }
-
   return (
     <div ref={projectsRef}>
       <Typography
@@ -207,10 +158,12 @@ const Projects = forwardRef(function Projects(prop, projectsRef) {
       <Box
         sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
       >
-        <Grid
-          container
-          spacing={2}
+        <Box
           sx={{
+            display: "flex",
+            justifyContent: "center",
+            flexWrap: "wrap",
+            gap: "16px",
             padding: "16px",
             "@media(max-width: 500px)": {
               flexDirection: "column",
@@ -219,81 +172,82 @@ const Projects = forwardRef(function Projects(prop, projectsRef) {
         >
           {projects.map((project, idx) => {
             return (
-              <Grid key={idx} size={project.size}>
-                <Box
-                  className="project-container"
-                  sx={{
-                    border: "1px solid rgba(0, 0, 0, 0.12)",
-                    backgroundColor: "white",
-                    display: "flex",
-                    gap: "10px",
-                    borderRadius: "5px",
-                    padding: "10px",
-                    "@media(max-width: 500px)": {
-                      flexDirection: "column",
-                    },
-                  }}
-                >
+              <Paper
+                key={idx}
+                className="project-container"
+                square={false}
+                elevation={12}
+                sx={{
+                  border: "1px solid rgba(0, 0, 0, 0.12)",
+                  backgroundColor: "white",
+                  borderRadius: "5px",
+                  padding: "10px",
+                  flex: 1,
+                  display: "flex",
+                  gap: "10px",
+                  flexWrap: "wrap",
+                }}
+              >
+                <Box>
                   <img
                     src={project.image.imgUrl}
                     alt={project.image.alt}
-                    style={{ width: "150px", height: "150px" }}
+                    style={{ width: "70%" }}
                   ></img>
-
-                  <Box className="project-content">
-                    <Typography>{project.name}</Typography>
-                    <Typography sx={{ fontWeight: "lighter" }}>
-                      {project.summary}
-                    </Typography>
-                    <Box
-                      component="ul"
-                      sx={{
-                        display: "flex",
-                        flexWrap: "wrap",
-                        listStyle: "none",
-                        p: 0.5,
-                        m: 0,
-                      }}
-                    >
-                      {project.tags.map((tag, idx) => {
-                        return (
-                          <ListItem key={idx}>
-                            <Chip
-                              icon={tag.icon}
-                              label={tag.name}
-                              sx={{ p: 0.5 }}
-                            />
-                          </ListItem>
-                        );
-                      })}
-                    </Box>
-                    <Typography>{project.description}</Typography>
-                    <LinkWrapper>
-                      <Link
-                        href={project.links.github}
-                        color="#da0064"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        See it on Github{" "}
-                        <GitHubIcon sx={{ fontSize: "1rem", mr: 1 }} />
-                      </Link>
-                      <Link
-                        href={project.links.live}
-                        color="#da0064"
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        See it Live{" "}
-                        <LanguageIcon sx={{ fontSize: "1rem", mr: 1 }} />
-                      </Link>
-                    </LinkWrapper>
-                  </Box>
                 </Box>
-              </Grid>
+                <Box className="project-content">
+                  <Typography>{project.name}</Typography>
+                  <Typography sx={{ fontWeight: "lighter" }}>
+                    {project.summary}
+                  </Typography>
+                  <Box
+                    component="ul"
+                    sx={{
+                      display: "flex",
+                      flexWrap: "wrap",
+                      listStyle: "none",
+                      p: 0.5,
+                      m: 0,
+                    }}
+                  >
+                    {project.tags.map((tag, idx) => {
+                      return (
+                        <ListItem key={idx}>
+                          <Chip
+                            icon={tag.icon}
+                            label={tag.name}
+                            sx={{ p: 0.5 }}
+                          />
+                        </ListItem>
+                      );
+                    })}
+                  </Box>
+                  <Typography>{project.description}</Typography>
+                  <LinkWrapper>
+                    <Link
+                      href={project.links.github}
+                      color="#da0064"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      See it on Github{" "}
+                      <GitHubIcon sx={{ fontSize: "1rem", mr: 1 }} />
+                    </Link>
+                    <Link
+                      href={project.links.live}
+                      color="#da0064"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      See it Live{" "}
+                      <LanguageIcon sx={{ fontSize: "1rem", mr: 1 }} />
+                    </Link>
+                  </LinkWrapper>
+                </Box>
+              </Paper>
             );
           })}
-        </Grid>
+        </Box>
         <Button
           href="https://github.com/ladeoshodi"
           rel="noreferrer"
