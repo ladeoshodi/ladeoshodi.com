@@ -62,7 +62,8 @@ const Skills = forwardRef(function Skills(prop, skillsRef) {
             <Box component="span" sx={{ fontWeight: "bold" }}>
               Libraries and Frameworks
             </Box>{" "}
-            - ReactJS | NodeJS | ExpressJS | Jest | Django | MaterialUI
+            - ReactJS | NodeJS | ExpressJS | TypeScript | Jest | Django |
+            MaterialUI
           </Typography>
           <Typography>
             <Box component="span" sx={{ fontWeight: "bold" }}>
