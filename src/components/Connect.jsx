@@ -25,7 +25,7 @@ function Connect() {
       >
         <Box>
           <Typography sx={{ marginBottom: "16px" }}>
-            let&apos;s connect
+            Let&apos;s connect
           </Typography>
           <Typography>
             If you are building tech-focused products to help professionals

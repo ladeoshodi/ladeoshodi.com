@@ -1,6 +1,7 @@
 import { Box, Avatar, Paper, Typography } from "@mui/material";
 
 import ladeImg from "../assets/lade-oshodi.jpg";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -46,6 +47,12 @@ function Header() {
               Full-Stack Developer
             </Box>{" "}
             with a background in product management
+          </Typography>
+          <Typography component="h5" variant="h5" sx={{ pt: 2 }}>
+            Read my{" "}
+            <Box component="span" sx={{ color: "#da0064" }}>
+              <Link to="/about-me">STORY</Link>
+            </Box>{" "}
           </Typography>
         </Box>
       </Box>
