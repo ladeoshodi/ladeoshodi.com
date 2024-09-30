@@ -98,7 +98,7 @@ function AboutMe() {
               activities outside of work!
             </Typography>
             <Box>
-              <Paragraph>
+              <Paragraph sx={{ fontWeight: 600 }}>
                 <PeopleIcon sx={{ color: "#da0064" }} /> Volunteering
               </Paragraph>
               <Paragraph>
@@ -111,80 +111,82 @@ function AboutMe() {
               <Paragraph>
                 Here are some of my recent volunteering activities:
               </Paragraph>
-              <ul>
-                <li>
-                  Organised community events with{" "}
-                  <Link
-                    href="https://productdive.com/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    ProductDive UK
-                  </Link>{" "}
-                  as a volunteer community organiser (Oct 2023 - Jun 2024)
-                </li>
-                <li>
-                  Gave a virtual talk on{" "}
-                  <Link
-                    href="https://docs.google.com/presentation/d/17AdSS6gqvTeFTMsXydLJ0qvdu8jWAU6SgoL1dlD3HoM/edit?usp=sharing"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    The art of critical thinking and problem solving{" "}
-                  </Link>
-                  to graduates of the Intrapreneurs Club network (Sept 2023)
-                </li>
-                <li>
-                  Published a company blog on{" "}
-                  <Link
-                    href="https://blog.container-solutions.com/facilitator-hacks"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Facilitating better Product workshops
-                  </Link>{" "}
-                  (Jan 2023)
-                </li>
-                <li>
-                  Mentored and trained 5 aspiring product managers at Univelcity
-                  Product Management BootCamp (April 2023)
-                </li>
-                <li>
-                  Coached 7 participants in the Axa Mansard Innovation Exchange
-                  Programme on product management strategies and best practices
-                  (Feb 2023)
-                </li>
-                <li>
-                  Gave a talk at{" "}
-                  <Link
-                    href="https://agilecambridge.net/programme/how-make-internal-experiments-work"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Agile Cambridge 2022
-                  </Link>{" "}
-                  on the topic{" "}
-                  <Box component="span" sx={{ fontWeight: "bold" }}>
-                    “How to make internal experiments work”
-                  </Box>{" "}
-                  (Jun 2022)
-                </li>
-                <li>
-                  Assisted in organising weekly community meetups and yearly
-                  conferences with{" "}
-                  <Link
-                    href="https://productschool.com/pl/product-school"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    Product School London
-                  </Link>{" "}
-                  (2019 - 2023)
-                </li>
-              </ul>
+              <Paragraph>
+                <ul>
+                  <li>
+                    Organised community events with{" "}
+                    <Link
+                      href="https://productdive.com/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      ProductDive UK
+                    </Link>{" "}
+                    as a volunteer community organiser (Oct 2023 - Jun 2024)
+                  </li>
+                  <li>
+                    Gave a virtual talk on{" "}
+                    <Link
+                      href="https://docs.google.com/presentation/d/17AdSS6gqvTeFTMsXydLJ0qvdu8jWAU6SgoL1dlD3HoM/edit?usp=sharing"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      The art of critical thinking and problem solving{" "}
+                    </Link>
+                    to graduates of the Intrapreneurs Club network (Sept 2023)
+                  </li>
+                  <li>
+                    Published a company blog on{" "}
+                    <Link
+                      href="https://blog.container-solutions.com/facilitator-hacks"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Facilitating better Product workshops
+                    </Link>{" "}
+                    (Jan 2023)
+                  </li>
+                  <li>
+                    Mentored and trained 5 aspiring product managers at
+                    Univelcity Product Management BootCamp (April 2023)
+                  </li>
+                  <li>
+                    Coached 7 participants in the Axa Mansard Innovation
+                    Exchange Programme on product management strategies and best
+                    practices (Feb 2023)
+                  </li>
+                  <li>
+                    Gave a talk at{" "}
+                    <Link
+                      href="https://agilecambridge.net/programme/how-make-internal-experiments-work"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Agile Cambridge 2022
+                    </Link>{" "}
+                    on the topic{" "}
+                    <Box component="span" sx={{ fontWeight: "bold" }}>
+                      “How to make internal experiments work”
+                    </Box>{" "}
+                    (Jun 2022)
+                  </li>
+                  <li>
+                    Assisted in organising weekly community meetups and yearly
+                    conferences with{" "}
+                    <Link
+                      href="https://productschool.com/pl/product-school"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Product School London
+                    </Link>{" "}
+                    (2019 - 2023)
+                  </li>
+                </ul>
+              </Paragraph>
             </Box>
             <Box>
-              <Paragraph>
+              <Paragraph sx={{ fontWeight: 600 }}>
                 <GamesIcon sx={{ color: "#da0064" }} /> Games (puzzles and
                 video)
               </Paragraph>
@@ -200,7 +202,7 @@ function AboutMe() {
               </Paragraph>
             </Box>
             <Box>
-              <Paragraph>
+              <Paragraph sx={{ fontWeight: 600 }}>
                 <DrawIcon sx={{ color: "#da0064" }} />
                 Blogging/Writing
               </Paragraph>
