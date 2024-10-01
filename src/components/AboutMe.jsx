@@ -111,7 +111,7 @@ function AboutMe() {
               <Paragraph>
                 Here are some of my recent volunteering activities:
               </Paragraph>
-              <ul style={{ fontWeight: "1.2rem" }}>
+              <ul style={{ fontSize: "1.2rem" }}>
                 <li>
                   Organised community events with{" "}
                   <Link
