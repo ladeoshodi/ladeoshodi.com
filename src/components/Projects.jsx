@@ -10,40 +10,30 @@ import {
 import BusinessIcon from "@mui/icons-material/Business";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LanguageIcon from "@mui/icons-material/Language";
-import HtmlIcon from "@mui/icons-material/Html";
-import CssIcon from "@mui/icons-material/Css";
-import JavascriptIcon from "@mui/icons-material/Javascript";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faReact } from "@fortawesome/free-brands-svg-icons";
 import { forwardRef } from "react";
+import {
+  SiTypescript,
+  SiExpress,
+  SiJest,
+  SiMongodb,
+  SiReact,
+  SiHtml5,
+  SiCss3,
+  SiBulma,
+  SiJavascript,
+} from "@icons-pack/react-simple-icons";
 
 import harryPotterGameImg from "../assets/harry-potter-game.png";
 
-const bulmaCSSIcon = (
-  <svg
-    width="13"
-    height="13"
-    viewBox="0 0 42 64"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-    <path
-      fillRule="evenodd"
-      clipRule="evenodd"
-      d="M0 44L3.81818 16L19.0909 0L38.1818 20L26.7273 32L42 48L19.0909 64L0 44Z"
-      fill="#616161"
-    />
-  </svg>
-);
 // Projects
 const projects = [
   {
     name: "Minesweeper",
     summary: "Grid based browser game",
     tags: [
-      { name: "HTML", icon: <HtmlIcon /> },
-      { name: "CSS", icon: <CssIcon /> },
-      { name: "JavaScript", icon: <JavascriptIcon /> },
+      { name: "HTML", icon: <SiHtml5 size={13} /> },
+      { name: "CSS", icon: <SiCss3 size={13} /> },
+      { name: "JavaScript", icon: <SiJavascript size={13} /> },
     ],
     image: {
       imgUrl:
@@ -62,9 +52,9 @@ const projects = [
     name: "Browser Calculator",
     summary: "Simple Calculator on the Browser",
     tags: [
-      { name: "HTML", icon: <HtmlIcon /> },
-      { name: "CSS", icon: <CssIcon /> },
-      { name: "JavaScript", icon: <JavascriptIcon /> },
+      { name: "HTML", icon: <SiHtml5 size={13} /> },
+      { name: "CSS", icon: <SiCss3 size={13} /> },
+      { name: "JavaScript", icon: <SiJavascript size={13} /> },
     ],
     image: {
       imgUrl:
@@ -83,10 +73,10 @@ const projects = [
     name: "Search-A-Word",
     summary: "Dictionary API",
     tags: [
-      { name: "HTML", icon: <HtmlIcon /> },
-      { name: "CSS", icon: <CssIcon /> },
-      { name: "JavaScript", icon: <JavascriptIcon /> },
-      { name: "ReactJS", icon: <FontAwesomeIcon icon={faReact} /> },
+      { name: "HTML", icon: <SiHtml5 size={13} /> },
+      { name: "CSS", icon: <SiCss3 size={13} /> },
+      { name: "JavaScript", icon: <SiJavascript size={13} /> },
+      { name: "ReactJS", icon: <SiReact size={13} /> },
     ],
     image: {
       imgUrl:
@@ -104,11 +94,11 @@ const projects = [
     name: "A Harry Potter Quiz Game",
     summary: "Quiz Game",
     tags: [
-      { name: "HTML", icon: <HtmlIcon /> },
-      { name: "CSS", icon: <CssIcon /> },
-      { name: "JavaScript", icon: <JavascriptIcon /> },
-      { name: "ReactJS", icon: <FontAwesomeIcon icon={faReact} /> },
-      { name: "Bulma CSS", icon: bulmaCSSIcon },
+      { name: "HTML", icon: <SiHtml5 size={13} /> },
+      { name: "CSS", icon: <SiCss3 size={13} /> },
+      { name: "JavaScript", icon: <SiJavascript size={13} /> },
+      { name: "ReactJS", icon: <SiReact size={13} /> },
+      { name: "Bulma CSS", icon: <SiBulma size={13} /> },
     ],
     image: {
       imgUrl: harryPotterGameImg,
@@ -118,6 +108,33 @@ const projects = [
     links: {
       github: "https://github.com/ladeoshodi/harry-potter-quiz-game",
       live: "https://harry-potter-quiz-game.netlify.app",
+    },
+    size: "auto",
+  },
+  {
+    name: "Party Stack",
+    summary: "Your party companion",
+    tags: [
+      { name: "HTML", icon: <SiHtml5 size={13} /> },
+      { name: "CSS", icon: <SiCss3 size={13} /> },
+      { name: "Bulma CSS", icon: <SiBulma size={13} /> },
+      { name: "JavaScript", icon: <SiJavascript size={13} /> },
+      { name: "ReactJS", icon: <SiReact size={13} /> },
+      { name: "TypeScript", icon: <SiTypescript size={13} /> },
+      { name: "ExpressJS", icon: <SiExpress size={13} /> },
+      { name: "Jest", icon: <SiJest size={13} /> },
+      { name: "MongoDB", icon: <SiMongodb size={13} /> },
+    ],
+    image: {
+      imgUrl:
+        "https://github.com/ladeoshodi/party-stack-fe/raw/main/readme-assets/home-page.png",
+      alt: "party stack",
+    },
+    description: "An online repository of indoor party games",
+    links: {
+      "github (FE)": "https://github.com/ladeoshodi/party-stack-fe",
+      "github (BE)": "https://github.com/ladeoshodi/party-stack-be",
+      live: "https://party-stack.netlify.app",
     },
     size: "auto",
   },
