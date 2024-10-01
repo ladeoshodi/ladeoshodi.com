@@ -189,6 +189,9 @@ const Projects = forwardRef(function Projects(prop, projectsRef) {
                   <Typography gutterBottom variant="h5" component="div">
                     {project.name}
                   </Typography>
+                  <Typography variant="body2" sx={{ color: "text.secondary" }}>
+                    {project.description}
+                  </Typography>
                   <Box
                     component="ul"
                     sx={{
@@ -211,9 +214,6 @@ const Projects = forwardRef(function Projects(prop, projectsRef) {
                       );
                     })}
                   </Box>
-                  <Typography variant="body2" sx={{ color: "text.secondary" }}>
-                    {project.description}
-                  </Typography>
                 </CardContent>
                 <CardActions>
                   <Link

@@ -26,9 +26,6 @@ function App() {
           backgroundPosition: "center",
           height: "90px",
           marginTop: "-8px",
-          // "@media (min-width:768px)": {
-          //   height: "60vh",
-          // },
         }}
       ></Box>
       <div className="body-content">
