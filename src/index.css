@@ -5,12 +5,12 @@ body {
   font-size: 1rem;
   line-height: 1.5;
   letter-spacing: 0.00938em;
-  background: #bbadadcc;
+  background: #e3e1e1e6;
   margin: 0;
 }
 
 .body-content {
   max-width: 1024px;
   margin: 0 auto;
-  background: #fdf7ffe0;
+  background: #ffffff94;
 }

@@ -13,7 +13,7 @@ function App() {
   const footerRef = useRef(null);
 
   return (
-    <>
+    <div className="body-content">
       <Nav
         skillsRef={skillsRef}
         projectsRef={projectsRef}
@@ -28,13 +28,11 @@ function App() {
           marginTop: "-8px",
         }}
       ></Box>
-      <div className="body-content">
-        <Header />
-        <Skills ref={skillsRef} />
-        <Projects ref={projectsRef} />
-      </div>
+      <Header />
+      <Skills ref={skillsRef} />
+      <Projects ref={projectsRef} />
       <Footer ref={footerRef} />
-    </>
+    </div>
   );
 }
 

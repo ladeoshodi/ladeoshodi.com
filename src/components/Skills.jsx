@@ -38,6 +38,10 @@ const Skills = forwardRef(function Skills(prop, skillsRef) {
         <ConstructionIcon sx={{ fontSize: "2.2rem", mr: 1 }} />
         Skills
       </Typography>
+      <Typography sx={{ fontWeight: 200, mb: 2, px: 2 }}>
+        Here are the key skills and languages I work with and will be adding
+        more as I learn:
+      </Typography>
       <Box
         sx={{
           display: "flex",
@@ -47,7 +51,7 @@ const Skills = forwardRef(function Skills(prop, skillsRef) {
           padding: "16px",
         }}
       >
-        <Card>
+        <Card elevation={12}>
           <ComputerIcon sx={{ fontSize: "2.2rem" }} />
           <Typography sx={{ fontWeight: "bold", fontSize: "1.2rem" }}>
             Web Development
@@ -78,7 +82,7 @@ const Skills = forwardRef(function Skills(prop, skillsRef) {
             - GIT | Github | RESTful APIs
           </Typography>
         </Card>
-        <Card>
+        <Card elevation={12}>
           <WorkIcon sx={{ fontSize: "2.2rem" }} />
           <Typography sx={{ fontWeight: "bold", fontSize: "1.2rem" }}>
             Business
@@ -90,7 +94,7 @@ const Skills = forwardRef(function Skills(prop, skillsRef) {
             | User Research | User story writing | User Personas
           </Typography>
         </Card>
-        <Card>
+        <Card elevation={12}>
           <BuildIcon sx={{ fontSize: "2.2rem" }} />
           <Typography sx={{ fontWeight: "bold", fontSize: "1.2rem" }}>
             Tools
@@ -100,7 +104,7 @@ const Skills = forwardRef(function Skills(prop, skillsRef) {
             | Pivotal Tracker | VSCode | Postman
           </Typography>
         </Card>
-        <Card>
+        <Card elevation={12}>
           <StarIcon sx={{ fontSize: "2.2rem" }} />
           <Typography sx={{ fontWeight: "bold", fontSize: "1.2rem" }}>
             People

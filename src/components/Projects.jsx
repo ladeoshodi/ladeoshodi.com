@@ -161,6 +161,9 @@ const Projects = forwardRef(function Projects(prop, projectsRef) {
         <BusinessIcon sx={{ fontSize: "2.2rem", mr: 1 }} />
         Projects
       </Typography>
+      <Typography sx={{ fontWeight: 200, mb: 2, px: 2 }}>
+        Here are a few projects I&apos;ve worked on in my spare time
+      </Typography>
       <Box
         sx={{ display: "flex", flexDirection: "column", alignItems: "center" }}
       >
@@ -178,7 +181,7 @@ const Projects = forwardRef(function Projects(prop, projectsRef) {
         >
           {projects.map((project, idx) => {
             return (
-              <Card key={idx} sx={{ maxWidth: 345 }}>
+              <Card key={idx} sx={{ maxWidth: 345 }} elevation={12}>
                 <CardMedia
                   component="img"
                   height="140"
