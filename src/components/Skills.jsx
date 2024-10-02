@@ -49,7 +49,7 @@ const Skills = forwardRef(function Skills(prop, skillsRef) {
   ];
 
   return (
-    <div ref={skillsRef}>
+    <div className="skills-section" ref={skillsRef}>
       <Typography
         component="h3"
         variant="h3"

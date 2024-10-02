@@ -78,7 +78,7 @@ function CareerTimeline() {
         Career Timeline
       </Typography>
       <Typography sx={{ fontWeight: 200, mb: 2, px: 2 }}>
-        Here is a whistle-stop tour of my career in the past decade
+        Here is a whistle-stop tour of my career over the past decade
       </Typography>
       <Timeline
         sx={{

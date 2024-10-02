@@ -147,7 +147,7 @@ const ListItem = styled("li")({
 
 const Projects = forwardRef(function Projects(prop, projectsRef) {
   return (
-    <div ref={projectsRef}>
+    <div className="projects-section" ref={projectsRef}>
       <Typography
         component="h3"
         variant="h3"

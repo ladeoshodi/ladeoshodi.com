@@ -14,3 +14,41 @@ body {
   margin: 0 auto;
   background: #ffffff94;
 }
+
+.section-divider {
+  position: relative;
+  height: 150px;
+}
+
+.skills-section {
+  background: linear-gradient(#ffffffbd, #ffffffb5);
+  padding-bottom: 20px;
+}
+
+.projects-section {
+  background-color: #ffffffb5;
+}
+
+/* SVG dividers */
+
+.custom-shape-divider-bottom-1727884018 {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  line-height: 0;
+  transform: rotate(180deg);
+}
+
+.custom-shape-divider-bottom-1727884018 svg {
+  position: relative;
+  display: block;
+  width: calc(100% + 1.3px);
+  height: 154px;
+  transform: rotateY(180deg);
+}
+
+.custom-shape-divider-bottom-1727884018 .shape-fill {
+  fill: #ffffff94;
+}
