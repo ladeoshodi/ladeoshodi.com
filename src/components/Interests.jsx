@@ -15,7 +15,7 @@ function Interests() {
         activities outside of work!
       </Typography>
       <Box>
-        <Paragraph sx={{ fontWeight: 600 }}>
+        <Paragraph variant="h6">
           <PeopleIcon sx={{ color: "#da0064" }} /> Volunteering
         </Paragraph>
         <Paragraph>
@@ -28,7 +28,7 @@ function Interests() {
         <Paragraph>
           Here are some of my recent volunteering activities:
         </Paragraph>
-        <ul style={{ fontSize: "1.2rem" }}>
+        <ul>
           <li>
             Organised community events with{" "}
             <Link
@@ -101,7 +101,7 @@ function Interests() {
         </ul>
       </Box>
       <Box>
-        <Paragraph sx={{ fontWeight: 600 }}>
+        <Paragraph variant="h6">
           <GamesIcon sx={{ color: "#da0064" }} /> Games (puzzles and video)
         </Paragraph>
         <Paragraph>
@@ -116,7 +116,7 @@ function Interests() {
         </Paragraph>
       </Box>
       <Box>
-        <Paragraph sx={{ fontWeight: 600 }}>
+        <Paragraph variant="h6">
           <DrawIcon sx={{ color: "#da0064" }} />
           Blogging/Writing
         </Paragraph>

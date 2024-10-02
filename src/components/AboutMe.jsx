@@ -9,7 +9,6 @@ import CareerTimeline from "./CareerTimeline";
 
 export const Paragraph = styled(Typography)({
   marginBottom: "8px",
-  fontSize: "1.2rem",
 });
 
 function AboutMe() {

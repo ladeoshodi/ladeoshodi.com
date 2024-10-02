@@ -22,6 +22,7 @@ import {
   SiReact,
   SiTypescript,
 } from "@icons-pack/react-simple-icons";
+import ViewKanbanIcon from "@mui/icons-material/ViewKanban";
 
 const Skills = forwardRef(function Skills(prop, skillsRef) {
   const skills = [
@@ -44,6 +45,7 @@ const Skills = forwardRef(function Skills(prop, skillsRef) {
     { name: "Postman", icon: <SiPostman size={15} /> },
     { name: "Confluence", icon: <SiConfluence size={15} /> },
     { name: "Jira", icon: <SiJira size={15} /> },
+    { name: "Agile", icon: <ViewKanbanIcon sx={{ width: 20 }} /> },
   ];
 
   return (
