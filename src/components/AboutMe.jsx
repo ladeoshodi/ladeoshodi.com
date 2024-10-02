@@ -7,7 +7,7 @@ import PeopleIcon from "@mui/icons-material/People";
 import GamesIcon from "@mui/icons-material/Games";
 import DrawIcon from "@mui/icons-material/Draw";
 
-import ladeBackground from "../assets/lade-oshodi.jpg";
+import ladeBackground from "../assets/lade-about.jpeg";
 
 const Paragraph = styled(Typography)({
   marginBottom: "8px",
@@ -80,10 +80,10 @@ function AboutMe() {
             background: `no-repeat url(${ladeBackground})`,
             backgroundSize: "cover",
             backgroundPosition: "center",
-            height: "40vh",
+            height: "250px",
             margin: "16px -16px 40px -16px",
             "@media (min-width:768px)": {
-              height: "60vh",
+              height: "400px",
             },
           }}
         ></Box>
