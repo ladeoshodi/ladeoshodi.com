@@ -70,7 +70,7 @@ function CareerTimeline() {
     },
   ];
   return (
-    <div>
+    <div className="career-timeline-section">
       <Typography component="h4" variant="h4">
         <ViewTimelineIcon
           sx={{ fontSize: "1.5rem", mr: 1, color: "#da0064" }}

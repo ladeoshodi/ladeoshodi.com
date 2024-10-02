@@ -29,6 +29,17 @@ body {
   background-color: #ffffffb5;
 }
 
+.about-me-divider {
+  margin: 0 -16px 16px -16px;
+}
+
+.career-timeline-section,
+.interest-section {
+  background-color: #ffffffb5;
+  padding: 16px;
+  margin: -16px;
+}
+
 /* SVG dividers */
 
 .custom-shape-divider-bottom-1727884018 {
