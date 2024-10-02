@@ -1,27 +1,50 @@
-import { Box, Typography, styled, Paper } from "@mui/material";
+import { Typography, Stack, Chip } from "@mui/material";
 import ConstructionIcon from "@mui/icons-material/Construction";
-import ComputerIcon from "@mui/icons-material/Computer";
-import WorkIcon from "@mui/icons-material/Work";
-import BuildIcon from "@mui/icons-material/Build";
-import StarIcon from "@mui/icons-material/Star";
 import { forwardRef } from "react";
+import {
+  SiBulma,
+  SiConfluence,
+  SiCss3,
+  SiDjango,
+  SiExpress,
+  SiGit,
+  SiGithub,
+  SiHtml5,
+  SiJavascript,
+  SiJest,
+  SiJira,
+  SiMongodb,
+  SiMui,
+  SiNodedotjs,
+  SiPostgresql,
+  SiPostman,
+  SiPython,
+  SiReact,
+  SiTypescript,
+} from "@icons-pack/react-simple-icons";
 
 const Skills = forwardRef(function Skills(prop, skillsRef) {
-  const Card = styled(Paper)({
-    display: "flex",
-    flexDirection: "column",
-    alignItems: "center",
-    backgroundColor: "#fff",
-    fontSize: "1rem",
-    padding: "8px",
-    textAlign: "center",
-    flexGrow: 1,
-    width: "40%",
-    color: "rgba(40, 40, 40, 0.87)",
-    "@media(max-width: 500px)": {
-      width: "100%",
-    },
-  });
+  const skills = [
+    { name: "HTML", icon: <SiHtml5 size={15} /> },
+    { name: "CSS", icon: <SiCss3 size={15} /> },
+    { name: "Bulma CSS", icon: <SiBulma size={15} /> },
+    { name: "Material UI", icon: <SiMui size={15} /> },
+    { name: "JavaScript", icon: <SiJavascript size={15} /> },
+    { name: "ReactJS", icon: <SiReact size={15} /> },
+    { name: "TypeScript", icon: <SiTypescript size={15} /> },
+    { name: "Node", icon: <SiNodedotjs size={15} /> },
+    { name: "ExpressJS", icon: <SiExpress size={15} /> },
+    { name: "Jest", icon: <SiJest size={15} /> },
+    { name: "Python", icon: <SiPython size={15} /> },
+    { name: "Django", icon: <SiDjango size={15} /> },
+    { name: "MongoDB", icon: <SiMongodb size={15} /> },
+    { name: "PostgreSQL", icon: <SiPostgresql size={15} /> },
+    { name: "Git", icon: <SiGit size={15} /> },
+    { name: "GitHub", icon: <SiGithub size={15} /> },
+    { name: "Postman", icon: <SiPostman size={15} /> },
+    { name: "Confluence", icon: <SiConfluence size={15} /> },
+    { name: "Jira", icon: <SiJira size={15} /> },
+  ];
 
   return (
     <div ref={skillsRef}>
@@ -39,82 +62,27 @@ const Skills = forwardRef(function Skills(prop, skillsRef) {
         Skills
       </Typography>
       <Typography sx={{ fontWeight: 200, mb: 2, px: 2 }}>
-        Here are the key skills and languages I work with and will be adding
-        more as I learn:
+        Here are the key skills, languages and frameworks I work with and will
+        be adding more as I learn:
       </Typography>
-      <Box
-        sx={{
-          display: "flex",
-          flexWrap: "wrap",
-          gap: 2,
-          justifyContent: "center",
-          padding: "16px",
-        }}
+      <Stack
+        direction="row"
+        spacing={1}
+        sx={{ p: 2, justifyContent: "center", flexWrap: "wrap", gap: 1 }}
       >
-        <Card elevation={12}>
-          <ComputerIcon sx={{ fontSize: "2.2rem" }} />
-          <Typography sx={{ fontWeight: "bold", fontSize: "1.2rem" }}>
-            Web Development
-          </Typography>
-          <Typography>
-            <Box component="span" sx={{ fontWeight: "bold" }}>
-              Languages
-            </Box>{" "}
-            - HTML | CSS | Javascript | Python
-          </Typography>
-          <Typography>
-            <Box component="span" sx={{ fontWeight: "bold" }}>
-              Libraries and Frameworks
-            </Box>{" "}
-            - ReactJS | NodeJS | ExpressJS | TypeScript | Jest | Django |
-            MaterialUI
-          </Typography>
-          <Typography>
-            <Box component="span" sx={{ fontWeight: "bold" }}>
-              Databases
-            </Box>{" "}
-            - SQL | PostgreSQL | MongoDB
-          </Typography>
-          <Typography>
-            <Box component="span" sx={{ fontWeight: "bold" }}>
-              Other
-            </Box>{" "}
-            - GIT | Github | RESTful APIs
-          </Typography>
-        </Card>
-        <Card elevation={12}>
-          <WorkIcon sx={{ fontSize: "2.2rem" }} />
-          <Typography sx={{ fontWeight: "bold", fontSize: "1.2rem" }}>
-            Business
-          </Typography>
-          <Typography>
-            Product Management | Agile (Scrum & Kanban) | Sprint Planning |
-            Requirement Gathering | Backlog Management | Roadmapping | Business
-            Analysis | Stakeholder Management | Workshop Planning & Facilitation
-            | User Research | User story writing | User Personas
-          </Typography>
-        </Card>
-        <Card elevation={12}>
-          <BuildIcon sx={{ fontSize: "2.2rem" }} />
-          <Typography sx={{ fontWeight: "bold", fontSize: "1.2rem" }}>
-            Tools
-          </Typography>
-          <Typography>
-            Confluence | Jira | Miro | Azure Devops | Trello | Notion | Balsamiq
-            | Pivotal Tracker | VSCode | Postman
-          </Typography>
-        </Card>
-        <Card elevation={12}>
-          <StarIcon sx={{ fontSize: "2.2rem" }} />
-          <Typography sx={{ fontWeight: "bold", fontSize: "1.2rem" }}>
-            People
-          </Typography>
-          <Typography>
-            Leadership | Mentorship | Organisation & Planning | Attentive to
-            Details| Critical/Analytical Thinking | Adaptable
-          </Typography>
-        </Card>
-      </Box>
+        {skills.map((skill, idx) => {
+          return (
+            <Chip
+              key={idx}
+              icon={skill.icon}
+              label={skill.name}
+              color="secondary"
+              sx={{ p: 2.5 }}
+              variant="outlined"
+            />
+          );
+        })}
+      </Stack>
     </div>
   );
 });
