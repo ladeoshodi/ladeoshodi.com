@@ -6,6 +6,7 @@ import ladeBackground from "../assets/lade-about.jpeg";
 import Interests from "./Interests";
 import AboutMeSummary from "./AboutMeSummary";
 import CareerTimeline from "./CareerTimeline";
+import ScrollToTop from "./ScrollToTop";
 
 export const Paragraph = styled(Typography)({
   marginBottom: "8px",
@@ -98,6 +99,7 @@ function AboutMe() {
         <Interests />
       </Box>
       <Footer />
+      <ScrollToTop />
     </div>
   );
 }

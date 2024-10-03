@@ -6,6 +6,7 @@ import Footer from "./components/Footer";
 import { useRef } from "react";
 import profileBanner from "./assets/profile-banner.jpeg";
 import { Box } from "@mui/material";
+import ScrollToTop from "./components/ScrollToTop";
 
 function App() {
   const skillsRef = useRef(null);
@@ -82,6 +83,7 @@ function App() {
       </div>
       <Projects ref={projectsRef} />
       <Footer ref={footerRef} />
+      <ScrollToTop />
     </div>
   );
 }
