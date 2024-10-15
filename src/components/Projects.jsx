@@ -24,12 +24,39 @@ import {
   SiCss3,
   SiBulma,
   SiJavascript,
+  SiPython,
+  SiDjango,
+  SiPostgresql,
 } from "@icons-pack/react-simple-icons";
 
 import harryPotterGameImg from "../assets/harry-potter-game.png";
 
 // Projects
 const projects = [
+  {
+    name: "Action Board",
+    description: "A task management board",
+    tags: [
+      { name: "HTML", icon: <SiHtml5 size={13} /> },
+      { name: "CSS", icon: <SiCss3 size={13} /> },
+      { name: "Bulma CSS", icon: <SiBulma size={13} /> },
+      { name: "JavaScript", icon: <SiJavascript size={13} /> },
+      { name: "ReactJS", icon: <SiReact size={13} /> },
+      { name: "TypeScript", icon: <SiTypescript size={13} /> },
+      { name: "Python", icon: <SiPython size={13} /> },
+      { name: "Django", icon: <SiDjango size={13} /> },
+      { name: "PostgreSQL", icon: <SiPostgresql size={13} /> },
+    ],
+    image: {
+      imgUrl:
+        "https://github.com/ladeoshodi/action-board/raw/main/readme-assets/actionboard-dnd.gif",
+      alt: "action board",
+    },
+    links: {
+      github: "https://github.com/ladeoshodi/action-board",
+      live: "https://action-board.netlify.app/",
+    },
+  },
   {
     name: "Party Stack",
     description: "An online repository of indoor party games",
@@ -65,10 +92,9 @@ const projects = [
     ],
     image: {
       imgUrl:
-        "https://github.com/ladeoshodi/minesweeper/raw/main/assets/minesweeper.png",
+        "https://github.com/ladeoshodi/minesweeper/raw/main/assets/minesweeper.gif",
       alt: "minesweeper",
     },
-
     links: {
       github: "https://github.com/ladeoshodi/minesweeper",
       live: "https://ladeoshodi.github.io/minesweeper/",
@@ -85,10 +111,9 @@ const projects = [
     ],
     image: {
       imgUrl:
-        "https://github.com/ladeoshodi/browser-calculator/raw/main/image.png",
+        "https://github.com/ladeoshodi/browser-calculator/raw/main/calculator.gif",
       alt: "calculator",
     },
-
     links: {
       github: "https://github.com/ladeoshodi/browser-calculator",
       live: "https://ladeoshodi.github.io/browser-calculator/",
@@ -105,10 +130,9 @@ const projects = [
     ],
     image: {
       imgUrl:
-        "https://github.com/ladeoshodi/search-a-word/raw/main/src/assets/search-a-word.png",
+        "https://github.com/ladeoshodi/search-a-word/raw/main/src/assets/search-a-word.gif",
       alt: "search a word",
     },
-
     links: {
       github: "https://github.com/ladeoshodi/search-a-word",
       live: "https://search-a-word.netlify.app/",
@@ -128,10 +152,28 @@ const projects = [
       imgUrl: harryPotterGameImg,
       alt: "harry potter quiz game",
     },
-
     links: {
       github: "https://github.com/ladeoshodi/harry-potter-quiz-game",
       live: "https://harry-potter-quiz-game.netlify.app",
+    },
+  },
+  {
+    name: "A To-Do app",
+    description:
+      "A simple to-do app utilising the browser’s local storage to persist data",
+    tags: [
+      { name: "HTML", icon: <SiHtml5 size={13} /> },
+      { name: "CSS", icon: <SiCss3 size={13} /> },
+      { name: "JavaScript", icon: <SiJavascript size={13} /> },
+    ],
+    image: {
+      imgUrl:
+        "https://github.com/ladeoshodi/to-do-js-app/raw/main/images/todo-app.png",
+      alt: "to do app",
+    },
+    links: {
+      github: "https://github.com/ladeoshodi/to-do-js-app",
+      live: "https://ladeoshodi.github.io/to-do-js-app/",
     },
   },
 ];
