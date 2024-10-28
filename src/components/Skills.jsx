@@ -20,6 +20,7 @@ import {
   SiPostman,
   SiPython,
   SiReact,
+  SiTailwindcss,
   SiTypescript,
 } from "@icons-pack/react-simple-icons";
 import ViewKanbanIcon from "@mui/icons-material/ViewKanban";
@@ -30,6 +31,7 @@ const Skills = forwardRef(function Skills(prop, skillsRef) {
     { name: "CSS", icon: <SiCss3 size={15} /> },
     { name: "Bulma CSS", icon: <SiBulma size={15} /> },
     { name: "Material UI", icon: <SiMui size={15} /> },
+    { name: "Tailwind CSS", icon: <SiTailwindcss size={15} /> },
     { name: "JavaScript", icon: <SiJavascript size={15} /> },
     { name: "ReactJS", icon: <SiReact size={15} /> },
     { name: "TypeScript", icon: <SiTypescript size={15} /> },
