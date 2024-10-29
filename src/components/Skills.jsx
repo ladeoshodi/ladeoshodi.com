@@ -20,8 +20,11 @@ import {
   SiPostman,
   SiPython,
   SiReact,
+  SiRtl,
   SiTailwindcss,
   SiTypescript,
+  SiVite,
+  SiVitest,
 } from "@icons-pack/react-simple-icons";
 import ViewKanbanIcon from "@mui/icons-material/ViewKanban";
 
@@ -37,7 +40,10 @@ const Skills = forwardRef(function Skills(prop, skillsRef) {
     { name: "TypeScript", icon: <SiTypescript size={15} /> },
     { name: "Node", icon: <SiNodedotjs size={15} /> },
     { name: "ExpressJS", icon: <SiExpress size={15} /> },
+    { name: "Vite", icon: <SiVite size={15} /> },
     { name: "Jest", icon: <SiJest size={15} /> },
+    { name: "React Testing Library", icon: <SiRtl size={15} /> },
+    { name: "Vitest", icon: <SiVitest size={15} /> },
     { name: "Python", icon: <SiPython size={15} /> },
     { name: "Django", icon: <SiDjango size={15} /> },
     { name: "MongoDB", icon: <SiMongodb size={15} /> },
