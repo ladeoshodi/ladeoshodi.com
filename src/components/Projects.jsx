@@ -27,6 +27,7 @@ import {
   SiPython,
   SiDjango,
   SiPostgresql,
+  SiTailwindcss,
 } from "@icons-pack/react-simple-icons";
 
 import harryPotterGameImg from "../assets/harry-potter-game.png";
@@ -55,6 +56,27 @@ const projects = [
     links: {
       github: "https://github.com/ladeoshodi/action-board",
       live: "https://action-board.netlify.app/",
+    },
+  },
+  {
+    name: "Product List Page",
+    description: "A product page with cart",
+    tags: [
+      { name: "HTML", icon: <SiHtml5 size={13} /> },
+      { name: "CSS", icon: <SiCss3 size={13} /> },
+      { name: "TailwindCSS", icon: <SiTailwindcss size={13} /> },
+      { name: "JavaScript", icon: <SiJavascript size={13} /> },
+      { name: "ReactJS", icon: <SiReact size={13} /> },
+      { name: "TypeScript", icon: <SiTypescript size={13} /> },
+    ],
+    image: {
+      imgUrl:
+        "https://github.com/ladeoshodi/product-list-with-cart/raw/main/public/readme-assets/product-list.gif",
+      alt: "product list page",
+    },
+    links: {
+      github: "https://github.com/ladeoshodi/product-list-with-cart",
+      live: "https://product-page-example.netlify.app/",
     },
   },
   {
@@ -223,7 +245,7 @@ const Projects = forwardRef(function Projects(prop, projectsRef) {
         >
           {projects.map((project, idx) => {
             return (
-              <Card key={idx} sx={{ maxWidth: 345 }} elevation={12}>
+              <Card key={idx} sx={{ maxWidth: 320 }} elevation={12}>
                 <CardMedia
                   component="img"
                   height="140"
